@@ -11,10 +11,10 @@ export const FilesIcon = (props: SVGProps<SVGSVGElement>) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       {...props}
     >
-      <rect width="24" height="24" fill="url(#pattern0_124_82)" />
+      <rect width="24" height="24" fill="url(#files)" />
       <defs>
         <pattern
-          id="pattern0_124_82"
+          id="files"
           patternContentUnits="objectBoundingBox"
           width="1"
           height="1"

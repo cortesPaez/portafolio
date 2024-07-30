@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   AppsBar,
   Bar,
@@ -15,9 +16,19 @@ import {
   VsCodeIcon,
   WifiIcon,
   WindowsIcon,
-} from "../icons";
+} from "../../components/icons";
 
 export const TaskBar = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const appIcons = [
     <WindowsIcon key="windows" />,
     <ScreenIcon key="screen" />,
@@ -28,20 +39,20 @@ export const TaskBar = () => {
 
   const iconsWindows = [
     <ArrowIcon style={{ marginTop: "5px", padding: "8px" }} key="arrow" />,
-    <>
-      <HoursWindows>
-        {new Date().toLocaleTimeString("es-cl", {
-          hour: "2-digit",
-          minute: "2-digit",
-        })}
-        <br />
-        <HoursWindows>{new Date().toLocaleDateString()}</HoursWindows>
-      </HoursWindows>
-    </>,
     <WifiSoundContainer key="">
       <WifiIcon key="wifi" />
       <SoundIcon key="sound" />
     </WifiSoundContainer>,
+    <>
+      <HoursWindows>
+        {currentTime.toLocaleTimeString("en-us", {
+          hour: "numeric",
+          minute: "2-digit",
+        })}
+        <br />
+        <HoursWindows>{currentTime.toLocaleDateString()}</HoursWindows>
+      </HoursWindows>
+    </>,
   ];
 
   return (

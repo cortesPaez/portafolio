@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import { WindowsIcon } from '../icons/apps/WindowsIcon';
 
 export const Bar = styled.div`
   padding: 3px 16px;
   display: flex;
   justify-content: center;
   background-color: #202020;
+  position: absolute;
+  z-index: 2;
+  left: -32px;
+  bottom: 0;
+  width: 100%;
 `
 export const AppsBar = styled.div`
   display: flex;

@@ -1,11 +1,15 @@
 "use client";
 
-import { TaskBar } from "@/components/taskBar/TaskBar";
+import { Screen } from "@/sections/screen/Screen";
+import { TaskBar } from "@/sections/taskBar/TaskBar";
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <main style={{ width: "100vw", minHeight: "100vh", maxHeight: "100vh" }}>
+        <Screen />
+      </main>
       <TaskBar />
-    </main>
+    </>
   );
 }

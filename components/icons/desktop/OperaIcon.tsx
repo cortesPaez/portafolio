@@ -11,10 +11,10 @@ export const OperaIcon = (props: SVGProps<SVGSVGElement>) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       {...props}
     >
-      <rect width="50" height="50" fill="url(#pattern0_10_148)" />
+      <rect width="50" height="50" fill="url(#opera)" />
       <defs>
         <pattern
-          id="pattern0_10_148"
+          id="opera"
           patternContentUnits="objectBoundingBox"
           width="1"
           height="1"
