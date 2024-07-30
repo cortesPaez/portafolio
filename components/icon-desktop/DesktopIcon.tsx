@@ -20,7 +20,7 @@ export const DesktopIcon = ({ icon, ref }: IDesktopIcon) => {
   return (
     <Drag drag dragConstraints={ref} dragMomentum={false}>
       {iconMap.get(icon)?.icon}
-      <IconLabel>{iconMap.get("file")?.text}</IconLabel>
+      <IconLabel>{iconMap.get(icon)?.text}</IconLabel>
     </Drag>
   );
 };

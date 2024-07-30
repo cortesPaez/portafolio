@@ -8,8 +8,9 @@ export const Bar = styled.div`
   position: absolute;
   z-index: 2;
   left: -32px;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
+  opacity: 0.97;
 `
 export const AppsBar = styled.div`
   display: flex;
