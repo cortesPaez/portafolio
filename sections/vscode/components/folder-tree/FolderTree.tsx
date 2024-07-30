@@ -1,6 +1,7 @@
-import FolderTree, { NodeData } from "react-folder-tree";
+import { NodeData } from "react-folder-tree";
 import "react-folder-tree/dist/style.css";
 import { FolderTreeContainer } from "./styles";
+import dynamic from "next/dynamic";
 
 export const Folders = () => {
   // Estructura de datos ajustada para cumplir con NodeData
@@ -23,6 +24,10 @@ export const Folders = () => {
   };
   const onTreeStateChange = (state: any, event: any) =>
     console.log(state, event);
+
+  const FolderTree = dynamic(() => import("react-folder-tree"), {
+    ssr: false,
+  });
 
   return (
     <FolderTreeContainer>
