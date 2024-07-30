@@ -5,5 +5,4 @@ export const Screen = styled.div`
   position: relative;
   display: flex;
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-
 `

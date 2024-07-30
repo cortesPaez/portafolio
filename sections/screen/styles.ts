@@ -14,3 +14,9 @@ export const Container = styled.div`
   gap: 24px;
   padding: 20px;
 `
+
+export const VscodeContainer = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`

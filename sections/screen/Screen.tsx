@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import VisualStudioCode from "../vscode/VisualStudioCode";
-import { Container, ScreenContainer } from "./styles";
+import { Container, ScreenContainer, VscodeContainer } from "./styles";
 import { DesktopIcon } from "@/components/desktop-icon/DesktopIcon";
+import VisualStudioCode from "../vscode/VisualStudioCode";
 
 export const Screen = () => {
   const constraintsRef = useRef(null);
@@ -12,7 +12,9 @@ export const Screen = () => {
         <DesktopIcon icon="opera" />
         <DesktopIcon icon="spotify" />
       </Container>
-      <VisualStudioCode />
+      <VscodeContainer drag dragMomentum={false}>
+        <VisualStudioCode />
+      </VscodeContainer>
     </ScreenContainer>
   );
 };
