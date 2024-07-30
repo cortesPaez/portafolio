@@ -1,13 +1,18 @@
-import React, { useRef } from "react";
-import { ScreenContainer } from "./styles";
-import { IconDesktopGroup } from "@/components/Icon-desktop-group/IconDesktopGroup";
+import { useRef } from "react";
+import VisualStudioCode from "../vscode/VisualStudioCode";
+import { Container, ScreenContainer } from "./styles";
+import { DesktopIcon } from "@/components/desktop-icon/DesktopIcon";
 
 export const Screen = () => {
-  const parentRef = useRef<any>();
-
+  const constraintsRef = useRef(null);
   return (
-    <ScreenContainer ref={parentRef}>
-      <IconDesktopGroup ref={parentRef} />
+    <ScreenContainer ref={constraintsRef}>
+      <Container>
+        <DesktopIcon icon="file" />
+        <DesktopIcon icon="opera" />
+        <DesktopIcon icon="spotify" />
+      </Container>
+      <VisualStudioCode />
     </ScreenContainer>
   );
 };

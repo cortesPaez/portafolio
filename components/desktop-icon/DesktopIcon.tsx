@@ -4,21 +4,20 @@ import { FileIcon, OperaIcon, SpotifyDesktopIcon } from "../icons";
 
 interface IDesktopIcon {
   icon: "opera" | "spotify" | "file";
-  ref: any;
 }
 
-export const DesktopIcon = ({ icon, ref }: IDesktopIcon) => {
+export const DesktopIcon = ({ icon }: IDesktopIcon) => {
   const iconMap = new Map([
+    ["file", { icon: <FileIcon key="file" />, text: "Archivos" }],
     ["opera", { icon: <OperaIcon key="opera" />, text: "Opera Browser" }],
     [
       "spotify",
       { icon: <SpotifyDesktopIcon key="spotify" />, text: "Spotify" },
-    ], // Añadido un objeto para mantener la consistencia
-    ["file", { icon: <FileIcon key="file" />, text: "Archivos" }], // Añadido un objeto para mantener la consistencia
+    ],
   ]);
 
   return (
-    <Drag drag dragConstraints={ref} dragMomentum={false}>
+    <Drag drag dragMomentum={false}>
       {iconMap.get(icon)?.icon}
       <IconLabel>{iconMap.get(icon)?.text}</IconLabel>
     </Drag>

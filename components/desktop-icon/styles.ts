@@ -13,4 +13,6 @@ export const IconLabel = styled.span`
   color: #FFF;
   font-size: 14px;
   letter-spacing: -2%;
+  text-align: center;
+  max-width: 70px;
 `
