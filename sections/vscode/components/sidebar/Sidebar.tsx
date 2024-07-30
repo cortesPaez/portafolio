@@ -6,6 +6,7 @@ import {
   SettingsIcon,
 } from "@/components/icons";
 import { Container, SidebarIconContainer } from "./styles";
+import Tabs from "../tabs/Tabs";
 
 export const Sidebar = () => {
   return (

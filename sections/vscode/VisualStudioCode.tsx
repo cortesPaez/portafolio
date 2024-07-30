@@ -1,5 +1,6 @@
 "use client";
 import { FileList, Sidebar } from "./components";
+import Tabs from "./components/tabs/Tabs";
 import { Screen } from "./styles";
 
 const VisualStudioCode = ({ ref }: any) => {
@@ -7,6 +8,7 @@ const VisualStudioCode = ({ ref }: any) => {
     <Screen>
       <Sidebar />
       <FileList />
+      <Tabs />
     </Screen>
   );
 };
