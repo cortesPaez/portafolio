@@ -5,13 +5,8 @@ import { useCallback, useState } from 'react';
 import { vscodeDark } from '@uiw/codemirror-theme-vscode';
 
 const Tabs = () => {
-	const [value, setValue] = useState("console.log('hello world!');\nconst a = 'aaa'");
+	const [value, setValue] = useState("console.log('work in progress!');");
 	const [tabSelected, setTabSelected] = useState(0);
-
-	const onChange = useCallback((val: any, viewUpdate: any) => {
-		console.log('val:', val);
-		setValue(val);
-	}, []);
 
 	const tab = [
 		{
@@ -22,7 +17,6 @@ const Tabs = () => {
 					value={value}
 					height="450px"
 					extensions={[javascript({ jsx: true })]}
-					onChange={onChange}
 					theme={vscodeDark}
 				/>
 			),
@@ -35,7 +29,6 @@ const Tabs = () => {
 					value={''}
 					height="450px"
 					extensions={[javascript({ jsx: true })]}
-					onChange={onChange}
 					theme={vscodeDark}
 				/>
 			),
@@ -46,7 +39,7 @@ const Tabs = () => {
 		<TabContainer>
 			<TabFlex>
 				{tab.map((item, i) => (
-					<Tab onClick={() => setTabSelected(i)} $active={i === tabSelected}>
+					<Tab key={i} onClick={() => setTabSelected(i)} $active={i === tabSelected}>
 						{item.title}
 					</Tab>
 				))}
