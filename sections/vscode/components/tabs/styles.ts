@@ -5,11 +5,15 @@ export const TabContainer = styled.div`
   background-color: #292929;
 `
 
-export const Tab = styled.div`
+interface TabProps {
+	$active: boolean;
+}
+
+export const Tab = styled.div<TabProps>`
   padding: 9.5px 32px;
-  background-color: #1E1E1E;
+  background-color: ${({ $active }) => $active ? "#1E1E1E" : "#292929"};
   font-size: 13px;
-  color: #A0A0A0;
+  color: ${({ $active }) => $active ? "#FFF" : "#A0A0A0"};
 `
 
 export const TabFlex = styled.div`

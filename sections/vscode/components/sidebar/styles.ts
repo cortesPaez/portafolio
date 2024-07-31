@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
   display: flex;
   max-height: 761px;
-  background-color: #181A1F;
+  background-color: #333333;
   max-width: 48px;
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 `
 
 interface ISidebarIconContainer {
-  readonly $active?: boolean
+	readonly $active?: boolean;
 }
 
 export const SidebarIconContainer = styled.div<ISidebarIconContainer>`
