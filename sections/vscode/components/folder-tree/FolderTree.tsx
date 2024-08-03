@@ -21,6 +21,7 @@ export const Folders = ({ treeState }: any) => {
 					setFileSelected(nodeData.name);
 					setTabSelected(Number(nodeData.path));
 				}}
+				readOnly
 			></FolderTree>
 		</FolderTreeContainer>
 	);

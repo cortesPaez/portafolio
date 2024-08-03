@@ -1,5 +1,5 @@
 'use client';
-import { FileList, Sidebar } from './components';
+import { FileList } from './components';
 import Tabs from './components/tabs/Tabs';
 import { Screen } from './styles';
 import useVisualStudioCode from '@/store/vscode';

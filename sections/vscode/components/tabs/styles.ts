@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TabContainer = styled.div`
 	width: 900px;
 	background-color: #292929;
-	border-radius: 8px;
+	border-radius: 0 8px 8px 0px;
 
 	@media (max-width: 764px) {
 		padding-bottom: 16px;
@@ -29,6 +29,7 @@ export const Tab = styled.div<TabProps>`
 	background-color: ${({ $active }) => ($active ? '#1E1E1E' : '#292929')};
 	font-size: 13px;
 	color: ${({ $active }) => ($active ? '#FFF' : '#A0A0A0')};
+	cursor: pointer;
 `;
 
 export const TabFlex = styled.div`

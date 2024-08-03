@@ -6,13 +6,8 @@ export const ScreenContainer = styled.div`
 	height: 100vh;
 	max-height: 100vh;
 	width: 100vw;
-	background-image: url('https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?t=st=1722718231~exp=1722721831~hmac=8aa2c5c63b44ad0b0a94892e1ad36ca8d030b5cb9ce8e8f71f02b7d7c50eff75&w=2000 ');
-	background-size: cover;
 	overflow: hidden;
-
-	@media (max-width: 764px) {
-		background-position: center;
-	}
+	background-color: #011627;
 `;
 
 export const Container = styled.div`

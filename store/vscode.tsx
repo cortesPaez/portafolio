@@ -14,12 +14,13 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 		name: 'src',
 		checked: 0.5,
 		isOpen: true,
-		children: [{ name: 'experience.tsx' }, { name: 'project.tsx' }],
+		children: [{ name: 'Presentation.tsx' }, { name: 'workExperience.ts' }],
 	},
 	fileSelected: '',
 	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),
-	tabSelected: 0,
+	tabSelected: 1,
 	setTabSelected: (tabSelected: number) => set({ tabSelected: tabSelected }),
+	
 }));
 
 export default useVisualStudioCode;

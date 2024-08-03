@@ -3,6 +3,7 @@ import { vscodeDark } from '@uiw/codemirror-theme-vscode';
 import CodeMirror from '@uiw/react-codemirror';
 import useVisualStudioCode from '@/store/vscode';
 import { Tab, TabContainer, TabFlex } from './styles';
+import { Experience } from '../experience/Experience';
 
 const Tabs = () => {
 	const { tabSelected, setTabSelected } = useVisualStudioCode();
@@ -12,7 +13,6 @@ const Tabs = () => {
 export const Presentation = () => {
 	const [presentation, setPresentation] = useState<IPresentationData>(defaultState);
 	setPresentation({
-		...presentation,
 		name: 'Cristóbal Cortés Páez',
 		location: 'Santiago, Chile',
 		career: 'Analista Programador',
@@ -23,7 +23,7 @@ export const Presentation = () => {
 
 	const tab = [
 		{
-			title: 'Untitled-1',
+			title: 'Presentation.tsx',
 			active: false,
 			panel: (
 				<CodeMirror
@@ -35,16 +35,9 @@ export const Presentation = () => {
 			),
 		},
 		{
-			title: 'Untitled-2',
+			title: 'workExperience.ts',
 			active: false,
-			panel: (
-				<CodeMirror
-					value={''}
-					height="450px"
-					extensions={[javascript({ jsx: true })]}
-					theme={vscodeDark}
-				/>
-			),
+			panel: <Experience/>,
 		},
 	];
 
