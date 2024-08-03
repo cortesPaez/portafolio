@@ -1,9 +1,17 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
-  min-width: 300px;
-  background-color: #252526;
+export const FileListContainer = styled.div`
+	display: flex;
+`
 
+export const Container = styled.div`
+  background-color: #252526;
+	width: 100%;
+
+
+	@media (max-width: 538px) {
+    width: 400px;
+  }
 `
 
 export const FileListLabelContainer = styled.div`

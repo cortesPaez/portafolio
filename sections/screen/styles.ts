@@ -7,6 +7,7 @@ export const ScreenContainer = styled.div`
   width: 100vw;
   background-image: url("https://mrwallpaper.com/images/file/cityscape-full-desktop-screen-hd-wm129moc1zq8gphu.jpg");
   background-size: cover;
+	overflow: hidden;
 `
 
 export const Container = styled.div`
@@ -19,4 +20,10 @@ export const VscodeContainer = styled(motion.div)`
   width: 100%;
   display: flex;
   justify-content: center;
+
+	@media (max-width: 764px) {
+    display: block;
+		margin: 0 auto;
+  }
 `
+

@@ -8,10 +8,9 @@ const FolderTree = dynamic(() => import('react-folder-tree'), {
 });
 
 export const Folders = ({ treeState }: any) => {
-	const { fileSelected, setFileSelected, setTabSelected } = useVisualStudioCode();
+	const { setFileSelected, setTabSelected } = useVisualStudioCode();
 	const onTreeStateChange = (state: any, event: any) => console.log(state, event);
 
-	console.log(fileSelected);
 	return (
 		<FolderTreeContainer>
 			<FolderTree

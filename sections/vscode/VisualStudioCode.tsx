@@ -9,7 +9,6 @@ const VisualStudioCode = () => {
 
 	return (
 		<Screen>
-			<Sidebar />
 			<FileList treeState={treeState} />
 			<Tabs />
 		</Screen>
