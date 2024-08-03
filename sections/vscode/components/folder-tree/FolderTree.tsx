@@ -4,12 +4,13 @@ import { FolderTreeContainer } from './styles';
 import dynamic from 'next/dynamic';
 import useVisualStudioCode from '@/store/vscode';
 
+const FolderTree = dynamic(() => import('react-folder-tree'), {
+	ssr: false,
+});
+
 export const Folders = ({ treeState }: any) => {
 	const { fileSelected, setFileSelected } = useVisualStudioCode();
 	const onTreeStateChange = (state: any, event: any) => console.log(state, event);
-	const FolderTree = dynamic(() => import('react-folder-tree'), {
-		ssr: false,
-	});
 
 	console.log(fileSelected);
 	return (
