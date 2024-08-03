@@ -1,10 +1,13 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Container, ScreenContainer, VscodeContainer } from './styles';
 import { DesktopIcon } from '@/components/desktop-icon/DesktopIcon';
 import VisualStudioCode from '../vscode/VisualStudioCode';
+import { useScreenSize } from '@/hooks/useScreenSize';
 
 export const Screen = () => {
 	const constraintsRef = useRef(null);
+	const { width } = useScreenSize();
+
 	return (
 		<ScreenContainer ref={constraintsRef}>
 			<Container>
@@ -12,7 +15,7 @@ export const Screen = () => {
 				<DesktopIcon icon="opera" />
 				<DesktopIcon icon="spotify" />
 			</Container>
-			<VscodeContainer drag dragMomentum={false}>
+			<VscodeContainer drag={width > 764} dragMomentum={false}>
 				<VisualStudioCode />
 			</VscodeContainer>
 		</ScreenContainer>
