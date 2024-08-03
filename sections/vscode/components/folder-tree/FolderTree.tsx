@@ -8,7 +8,7 @@ const FolderTree = dynamic(() => import('react-folder-tree'), {
 });
 
 export const Folders = ({ treeState }: any) => {
-	const { fileSelected, setFileSelected } = useVisualStudioCode();
+	const { fileSelected, setFileSelected, setTabSelected } = useVisualStudioCode();
 	const onTreeStateChange = (state: any, event: any) => console.log(state, event);
 
 	console.log(fileSelected);
@@ -20,6 +20,7 @@ export const Folders = ({ treeState }: any) => {
 				onChange={onTreeStateChange}
 				onNameClick={({ nodeData }) => {
 					setFileSelected(nodeData.name);
+					setTabSelected(Number(nodeData.path));
 				}}
 			></FolderTree>
 		</FolderTreeContainer>
