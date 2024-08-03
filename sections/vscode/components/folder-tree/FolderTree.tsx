@@ -1,7 +1,7 @@
 import 'react-folder-tree/dist/style.css';
-import { FolderTreeContainer } from './styles';
 import dynamic from 'next/dynamic';
 import useVisualStudioCode from '@/store/vscode';
+import { FolderTreeContainer } from './styles';
 
 const FolderTree = dynamic(() => import('react-folder-tree'), {
 	ssr: false,

@@ -1,12 +1,13 @@
-import { Tab, TabContainer, TabFlex } from './styles';
-import CodeMirror from '@uiw/react-codemirror';
+import { useState } from 'react';
 import { javascript } from '@codemirror/lang-javascript';
-import { useCallback, useState } from 'react';
 import { vscodeDark } from '@uiw/codemirror-theme-vscode';
+import CodeMirror from '@uiw/react-codemirror';
+import useVisualStudioCode from '@/store/vscode';
+import { Tab, TabContainer, TabFlex } from './styles';
 
 const Tabs = () => {
 	const [value, setValue] = useState("console.log('work in progress!');");
-	const [tabSelected, setTabSelected] = useState(0);
+	const { tabSelected, setTabSelected } = useVisualStudioCode();
 
 	const tab = [
 		{
@@ -38,13 +39,14 @@ const Tabs = () => {
 	return (
 		<TabContainer>
 			<TabFlex>
-				{tab.map((item, i) => (
-					<Tab key={i} onClick={() => setTabSelected(i)} $active={i === tabSelected}>
-						{item.title}
-					</Tab>
-				))}
+				{typeof tabSelected === 'number' &&
+					tab.map((item, i) => (
+						<Tab key={i} onClick={() => setTabSelected(i)} $active={i === tabSelected}>
+							{item.title}
+						</Tab>
+					))}
 			</TabFlex>
-			{tab[tabSelected].panel}
+			{typeof tabSelected === 'number' && tab[tabSelected].panel}
 		</TabContainer>
 	);
 };

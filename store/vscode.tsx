@@ -4,7 +4,9 @@ import { NodeData } from 'react-folder-tree';
 interface IVisualStudioCode {
 	treeState: NodeData;
 	fileSelected: string;
-	setFileSelected: (value: string) => void;
+	setFileSelected: (fileSelected: string) => void;
+	tabSelected: number | undefined;
+	setTabSelected: (tabSelected: number) => void;
 }
 
 const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
@@ -15,7 +17,9 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 		children: [{ name: 'experience.tsx' }, { name: 'project.tsx' }],
 	},
 	fileSelected: '',
-	setFileSelected: (newValue: string) => set({ fileSelected: newValue }),
+	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),
+	tabSelected: undefined,
+	setTabSelected: (tabSelected: number) => set({ tabSelected: tabSelected }),
 }));
 
 export default useVisualStudioCode;
