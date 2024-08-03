@@ -1,4 +1,3 @@
-import { NodeData } from 'react-folder-tree';
 import 'react-folder-tree/dist/style.css';
 import { FolderTreeContainer } from './styles';
 import dynamic from 'next/dynamic';
