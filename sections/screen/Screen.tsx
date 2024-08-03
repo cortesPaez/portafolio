@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Container, ScreenContainer, VscodeContainer } from './styles';
 import { DesktopIcon } from '@/components/desktop-icon/DesktopIcon';
 import VisualStudioCode from '../vscode/VisualStudioCode';
@@ -15,7 +15,7 @@ export const Screen = () => {
 				<DesktopIcon icon="opera" />
 				<DesktopIcon icon="spotify" />
 			</Container>
-			<VscodeContainer drag={width > 764} dragMomentum={false}>
+			<VscodeContainer drag={typeof width === 'number' && width > 764} dragMomentum={false}>
 				<VisualStudioCode />
 			</VscodeContainer>
 		</ScreenContainer>

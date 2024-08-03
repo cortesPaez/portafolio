@@ -13,6 +13,7 @@ export const FileListContainer = styled.div`
 export const Container = styled.div`
 	background-color: #252526;
 	width: 100%;
+	min-width: 200px;
 
 	@media (max-width: 764px) {
 		padding-bottom: 16px;
