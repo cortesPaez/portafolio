@@ -3,14 +3,20 @@ import styled from 'styled-components';
 export const TabContainer = styled.div`
 	width: 500px;
 	background-color: #292929;
-	border-top-right-radius: 8px;
-	border-radius: 8px !important;
+	border-radius: 8px;
 
 	@media (max-width: 764px) {
+		padding-bottom: 16px;
+		border-radius: 0px;
 		width: 100%;
 	}
+
 	.cm-editor {
-		border-radius: 8px !important;
+		border-radius: 8px;
+
+		@media (max-width: 764px) {
+			border-radius: 0px;
+		}
 	}
 `;
 
