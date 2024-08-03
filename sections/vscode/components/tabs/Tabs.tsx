@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { javascript } from '@codemirror/lang-javascript';
 import { vscodeDark } from '@uiw/codemirror-theme-vscode';
 import CodeMirror from '@uiw/react-codemirror';
@@ -6,8 +5,21 @@ import useVisualStudioCode from '@/store/vscode';
 import { Tab, TabContainer, TabFlex } from './styles';
 
 const Tabs = () => {
-	const [value, setValue] = useState("console.log('work in progress!');");
 	const { tabSelected, setTabSelected } = useVisualStudioCode();
+
+	const PRESENTATION = `import { useState } from 'react';
+
+export const Presentation = () => {
+	const [presentation, setPresentation] = useState<IPresentationData>(defaultState);
+	setPresentation({
+		...presentation,
+		name: 'Cristóbal Cortés Páez',
+		location: 'Santiago, Chile',
+		career: 'Analista Programador',
+		specialization: 'Front End',
+	});
+};
+`;
 
 	const tab = [
 		{
@@ -15,7 +27,7 @@ const Tabs = () => {
 			active: false,
 			panel: (
 				<CodeMirror
-					value={value}
+					value={PRESENTATION}
 					height="450px"
 					extensions={[javascript({ jsx: true })]}
 					theme={vscodeDark}
