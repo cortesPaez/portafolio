@@ -7,9 +7,8 @@ export const Bar = styled.div`
 	background-color: #202020;
 	position: absolute;
 	z-index: 2;
-	left: -32px;
 	bottom: 0px;
-	width: 100%;
+	width: -webkit-fill-available;
 	opacity: 0.97;
 `;
 
@@ -22,8 +21,19 @@ export const AppsBar = styled.div`
 		& > div:first-child {
 			display: none;
 		}
+		justify-content: space-between;
+		width: 100%;
+	}
+`;
 
-		width: auto;
+export const AppIconContainer = styled.div`
+	display: flex;
+	gap: 8px;
+
+	@media (max-width: 764px) {
+		& > div:nth-child(2) {
+			display: none;
+		}
 	}
 `;
 
@@ -45,6 +55,10 @@ export const WindowsIconContainer = styled.div`
 	align-items: center;
 	width: 100%;
 	gap: 8px;
+
+	@media (max-width: 764px) {
+		width: auto;
+	}
 `;
 
 export const HoursWindows = styled.span`

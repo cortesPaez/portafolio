@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
+	AppIconContainer,
 	AppsBar,
 	Bar,
 	HoursWindows,
@@ -10,6 +11,7 @@ import {
 import {
 	ArrowIcon,
 	FilesIcon,
+	ScreenIcon,
 	SoundIcon,
 	SpotifyIcon,
 	VsCodeIcon,
@@ -28,7 +30,12 @@ export const TaskBar = () => {
 		return () => clearInterval(timer);
 	}, []);
 
-	const appIcons = [<WindowsIcon key="windows" />, <VsCodeIcon key="vscode" />];
+	const appIcons = [
+		<WindowsIcon key="windows" />,
+		<ScreenIcon key="screen" />,
+		<VsCodeIcon key="vscode" />,
+		<FilesIcon key="file" />,
+	];
 
 	const iconsWindows = [
 		<ArrowIcon style={{ marginTop: '5px', padding: '8px' }} key="arrow" />,
@@ -52,9 +59,11 @@ export const TaskBar = () => {
 		<Bar>
 			<AppsBar>
 				<div style={{ width: '100%' }}></div>
-				{appIcons.map((icon, i) => (
-					<IconContainer key={i}>{icon}</IconContainer>
-				))}
+				<AppIconContainer>
+					{appIcons.map((icon, i) => (
+						<IconContainer key={i}>{icon}</IconContainer>
+					))}
+				</AppIconContainer>
 				<WindowsIconContainer>
 					{iconsWindows.map((icons, i) => (
 						<IconContainer key={i}>{icons}</IconContainer>
