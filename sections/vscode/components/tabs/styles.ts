@@ -3,12 +3,14 @@ import styled from 'styled-components';
 export const TabContainer = styled.div`
 	width: 500px;
 	background-color: #292929;
+	border-top-right-radius: 8px;
+	border-radius: 8px !important;
 
 	@media (max-width: 764px) {
 		width: 100%;
-
-		.cm-editor {
-		}
+	}
+	.cm-editor {
+		border-radius: 8px !important;
 	}
 `;
 

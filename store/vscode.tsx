@@ -12,13 +12,13 @@ interface IVisualStudioCode {
 const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 	treeState: {
 		name: 'src',
-		checked: 0.5, // half check: some children are checked
-		isOpen: true, // this folder is opened, we can see it's children
+		checked: 0.5,
+		isOpen: true,
 		children: [{ name: 'experience.tsx' }, { name: 'project.tsx' }],
 	},
 	fileSelected: '',
 	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),
-	tabSelected: undefined,
+	tabSelected: 0,
 	setTabSelected: (tabSelected: number) => set({ tabSelected: tabSelected }),
 }));
 
