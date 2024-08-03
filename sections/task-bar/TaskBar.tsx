@@ -1,73 +1,66 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
-  AppsBar,
-  Bar,
-  HoursWindows,
-  IconContainer,
-  WifiSoundContainer,
-  WindowsIconContainer,
-} from "./styles";
+	AppsBar,
+	Bar,
+	HoursWindows,
+	IconContainer,
+	WifiSoundContainer,
+	WindowsIconContainer,
+} from './styles';
 import {
-  ArrowIcon,
-  FilesIcon,
-  ScreenIcon,
-  SoundIcon,
-  SpotifyIcon,
-  VsCodeIcon,
-  WifiIcon,
-  WindowsIcon,
-} from "../../components/icons";
+	ArrowIcon,
+	FilesIcon,
+	SoundIcon,
+	SpotifyIcon,
+	VsCodeIcon,
+	WifiIcon,
+	WindowsIcon,
+} from '../../components/icons';
 
 export const TaskBar = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+	const [currentTime, setCurrentTime] = useState(new Date());
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setCurrentTime(new Date());
+		}, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+		return () => clearInterval(timer);
+	}, []);
 
-  const appIcons = [
-    <WindowsIcon key="windows" />,
-    <ScreenIcon key="screen" />,
-    <FilesIcon key="file" />,
-    <VsCodeIcon key="vscode" />,
-    <SpotifyIcon key="spotify" />,
-  ];
+	const appIcons = [<WindowsIcon key="windows" />, <VsCodeIcon key="vscode" />];
 
-  const iconsWindows = [
-    <ArrowIcon style={{ marginTop: "5px", padding: "8px" }} key="arrow" />,
-    <WifiSoundContainer key="">
-      <WifiIcon key="wifi" />
-      <SoundIcon key="sound" />
-    </WifiSoundContainer>,
-    <>
-      <HoursWindows>
-        {currentTime.toLocaleTimeString("en-us", {
-          hour: "numeric",
-          minute: "2-digit",
-        })}
-        <br />
-        <HoursWindows>{currentTime.toLocaleDateString()}</HoursWindows>
-      </HoursWindows>
-    </>,
-  ];
+	const iconsWindows = [
+		<ArrowIcon style={{ marginTop: '5px', padding: '8px' }} key="arrow" />,
+		<WifiSoundContainer key="">
+			<WifiIcon key="wifi" />
+			<SoundIcon key="sound" />
+		</WifiSoundContainer>,
+		<>
+			<HoursWindows>
+				{currentTime.toLocaleTimeString('en-us', {
+					hour: 'numeric',
+					minute: '2-digit',
+				})}
+				<br />
+				<HoursWindows>{currentTime.toLocaleDateString()}</HoursWindows>
+			</HoursWindows>
+		</>,
+	];
 
-  return (
-    <Bar>
-      <AppsBar>
-        <div style={{ width: "100%" }}></div>
-        {appIcons.map((icon, i) => (
-          <IconContainer key={i}>{icon}</IconContainer>
-        ))}
-        <WindowsIconContainer>
-          {iconsWindows.map((icons, i) => (
-            <IconContainer key={i}>{icons}</IconContainer>
-          ))}
-        </WindowsIconContainer>
-      </AppsBar>
-    </Bar>
-  );
+	return (
+		<Bar>
+			<AppsBar>
+				<div style={{ width: '100%' }}></div>
+				{appIcons.map((icon, i) => (
+					<IconContainer key={i}>{icon}</IconContainer>
+				))}
+				<WindowsIconContainer>
+					{iconsWindows.map((icons, i) => (
+						<IconContainer key={i}>{icons}</IconContainer>
+					))}
+				</WindowsIconContainer>
+			</AppsBar>
+		</Bar>
+	);
 };

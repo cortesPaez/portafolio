@@ -1,33 +1,34 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const FileListContainer = styled.div`
 	display: flex;
-`
+
+	@media (max-width: 764px) {
+		& > div:first-child {
+			display: none;
+		}
+	}
+`;
 
 export const Container = styled.div`
-  background-color: #252526;
+	background-color: #252526;
 	width: 100%;
-
-
-	@media (max-width: 538px) {
-    width: 400px;
-  }
-`
+`;
 
 export const FileListLabelContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 20px;
+`;
 
 export const FileListLabel = styled.div`
-  font-size: 11px;
-  color: #CCCCCC;
-`
+	font-size: 11px;
+	color: #cccccc;
+`;
 
 export const FolderDetail = styled.details`
-  color: #CCCCCC;
-  font-size: 11px;
-  font-weight: 500;
-`
+	color: #cccccc;
+	font-size: 11px;
+	font-weight: 500;
+`;
