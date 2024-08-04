@@ -5,12 +5,19 @@ export const Card = styled.div`
 	border-bottom-right-radius: 8px;
 	display: flex;
 	padding: 24px;
+
+	@media (max-width: 764px) {
+		img {
+			display: none;
+		}
+	}
 `;
 
 export const CardBody = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	flex-wrap: wrap;
 `;
 
 export const InfoContainer = styled.div`
@@ -49,4 +56,5 @@ export const BadgeContainer = styled.div`
 	display: flex;
 	gap: 8px;
 	margin-top: 8px;
+	flex-wrap: wrap;
 `;
