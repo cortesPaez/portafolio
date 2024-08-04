@@ -18,6 +18,11 @@ export const InfoContainer = styled.div`
 	flex-direction: column;
 	color: #cccccc;
 
+	ul {
+		padding: 0px;
+		margin-left: 16px;
+	}
+
 	h2 {
 		margin: 0;
 		font-size: 26px;

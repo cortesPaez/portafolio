@@ -1,21 +1,21 @@
 import { Container } from './styles';
 
-type BadgeType = {
-	text:
-		| 'ReactJS'
-		| 'Typescript'
-		| 'Github'
-		| 'Gitlab'
-		| 'Git'
-		| 'Bitbucket'
-		| 'Storybook'
-		| 'Atomic Design'
-		| 'Ruby on Rails'
-		| 'NodeJS'
-		| 'Scrum'
-		| 'Redux';
-};
+export type BadgeType =
+	| 'ReactJS'
+	| 'Typescript'
+	| 'Github'
+	| 'Gitlab'
+	| 'Git'
+	| 'Bitbucket'
+	| 'Storybook'
+	| 'Atomic Design'
+	| 'Ruby on Rails'
+	| 'NodeJS'
+	| 'Scrum'
+	| 'Redux'
+	| 'styled-components'
+	| 'Material UI';
 
-export const Badge = ({ text }: BadgeType) => {
+export const Badge = ({ text }: { text: BadgeType }) => {
 	return <Container>{text}</Container>;
 };
