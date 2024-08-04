@@ -18,9 +18,8 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 	},
 	fileSelected: '',
 	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),
-	tabSelected: 1,
+	tabSelected: 0,
 	setTabSelected: (tabSelected: number) => set({ tabSelected: tabSelected }),
-	
 }));
 
 export default useVisualStudioCode;
