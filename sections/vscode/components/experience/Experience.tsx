@@ -52,7 +52,7 @@ export const Experience = () => {
 	];
 
 	return (
-		<>
+		<div style={{ maxHeight: '90%', overflowY: 'scroll' }}>
 			{workExperience.map(({ image, company, title, time, description, badge }) => (
 				<Card key={company}>
 					<CardBody>
@@ -80,6 +80,6 @@ export const Experience = () => {
 					</CardBody>
 				</Card>
 			))}
-		</>
+		</div>
 	);
 };

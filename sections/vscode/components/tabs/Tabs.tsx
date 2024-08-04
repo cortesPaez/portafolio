@@ -28,7 +28,7 @@ export const Presentation = () => {
 			panel: (
 				<CodeMirror
 					value={PRESENTATION}
-					height="450px"
+					height="645px"
 					extensions={[javascript({ jsx: true })]}
 					theme={vscodeDark}
 				/>
@@ -37,7 +37,7 @@ export const Presentation = () => {
 		{
 			title: 'workExperience.ts',
 			active: false,
-			panel: <Experience/>,
+			panel: <Experience />,
 		},
 	];
 
