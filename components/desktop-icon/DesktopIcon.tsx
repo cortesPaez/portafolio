@@ -8,8 +8,8 @@ interface IDesktopIcon {
 
 export const DesktopIcon = ({ icon }: IDesktopIcon) => {
 	const iconMap = new Map([
-		['file', { icon: <FileIcon key="file" />, text: 'Archivos' }],
 		['opera', { icon: <OperaIcon key="opera" />, text: 'Curriculum' }],
+		['file', { icon: <FileIcon key="file" />, text: 'Archivos' }],
 		['spotify', { icon: <SpotifyDesktopIcon key="spotify" />, text: 'Spotify' }],
 	]);
 

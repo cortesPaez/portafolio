@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const ScreenContainer = styled.div`
-	height: 100vh;
-	max-height: 100vh;
+	height: 100svh;
+	max-height: 100svh;
 	width: 100vw;
 	overflow: hidden;
 	background-color: #011627;
@@ -18,11 +18,12 @@ export const Container = styled.div`
 
 export const VscodeContainer = styled(motion.div)`
 	width: 100%;
-	display: flex;
-	justify-content: center;
+	max-width: 1100px;
+	display: block;
+	margin: -40px auto;
 
 	@media (max-width: 764px) {
-		display: block;
-		margin: 0 auto;
+		position: absolute;
+		top: 0px;
 	}
 `;
