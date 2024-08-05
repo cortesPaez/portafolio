@@ -21,4 +21,8 @@ export const ScreenBar = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: end;
+
+	@media (max-width: 764px) {
+		border-radius: 0;
+	}
 `;
