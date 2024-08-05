@@ -1,11 +1,10 @@
-import { CallExpression } from './../../node_modules/acorn/dist/acorn.d';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const ScreenContainer = styled.div`
+	width: 100%;
 	height: 100svh;
 	max-height: 100svh;
-	width: 100vw;
 	overflow: hidden;
 	background-color: #011627;
 `;
@@ -17,7 +16,6 @@ export const Container = styled.div`
 `;
 
 export const VscodeContainer = styled(motion.div)`
-	width: 100%;
 	max-width: 1100px;
 	display: block;
 	margin: -40px auto;
@@ -25,5 +23,7 @@ export const VscodeContainer = styled(motion.div)`
 	@media (max-width: 764px) {
 		position: absolute;
 		top: 0px;
+		width: 100%;
+		margin: 0;
 	}
 `;

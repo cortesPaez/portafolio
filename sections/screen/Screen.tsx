@@ -11,8 +11,8 @@ export const Screen = () => {
 	return (
 		<ScreenContainer ref={constraintsRef}>
 			<Container>
-				<DesktopIcon icon="file" />
 				<DesktopIcon icon="opera" />
+				<DesktopIcon icon="file" />
 				<DesktopIcon icon="spotify" />
 			</Container>
 			<VscodeContainer

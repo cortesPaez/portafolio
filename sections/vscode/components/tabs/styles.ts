@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const TabContainer = styled.div`
-	width: 900px;
 	background-color: #292929;
 	border-radius: 0 8px 8px 0px;
 

@@ -9,5 +9,6 @@ export const Screen = styled.div`
 
 	@media (max-width: 764px) {
 		flex-direction: column;
+		height: 100%;
 	}
 `;

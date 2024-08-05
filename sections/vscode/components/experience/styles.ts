@@ -17,7 +17,10 @@ export const CardBody = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	flex-wrap: wrap;
+
+	@media (max-width: 764px) {
+		flex-wrap: wrap;
+	}
 `;
 
 export const InfoContainer = styled.div`

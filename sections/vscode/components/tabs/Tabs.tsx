@@ -31,6 +31,7 @@ export const Presentation = () => {
 					height="645px"
 					extensions={[javascript({ jsx: true })]}
 					theme={vscodeDark}
+					indentWithTab
 				/>
 			),
 		},
