@@ -28,10 +28,11 @@ export const Presentation = () => {
 			panel: (
 				<CodeMirror
 					value={PRESENTATION}
-					height="645px"
+					height="608px"
 					extensions={[javascript({ jsx: true })]}
 					theme={vscodeDark}
 					indentWithTab
+					readOnly
 				/>
 			),
 		},

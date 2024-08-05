@@ -12,3 +12,13 @@ export const Screen = styled.div`
 		height: 100%;
 	}
 `;
+
+export const ScreenBar = styled.div`
+	padding: 8px;
+	background-color: #202020;
+	max-width: 1100px;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+`;

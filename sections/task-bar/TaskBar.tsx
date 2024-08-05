@@ -18,8 +18,10 @@ import {
 	WifiIcon,
 	WindowsIcon,
 } from '../../components/icons';
+import useVisualStudioCode from '@/store/vscode';
 
 export const TaskBar = () => {
+	const { setShow: setShowVsCode } = useVisualStudioCode();
 	const [currentTime, setCurrentTime] = useState(new Date());
 
 	useEffect(() => {
@@ -33,7 +35,7 @@ export const TaskBar = () => {
 	const appIcons = [
 		<WindowsIcon key="windows" />,
 		<ScreenIcon key="screen" />,
-		<VsCodeIcon key="vscode" />,
+		<VsCodeIcon key="vscode" onClick={() => setShowVsCode(true)} />,
 		<FilesIcon key="file" />,
 	];
 

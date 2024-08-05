@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const TabContainer = styled.div`
 	background-color: #292929;
-	border-radius: 0 8px 8px 0px;
 
 	@media (max-width: 764px) {
 		padding-bottom: 16px;
@@ -11,7 +10,11 @@ export const TabContainer = styled.div`
 	}
 
 	.cm-editor {
-		border-radius: 8px;
+		& > .cm-scroller {
+			& > div:nth-child(2) {
+				tab-size: 2 !important;
+			}
+		}
 
 		@media (max-width: 764px) {
 			border-radius: 0px;

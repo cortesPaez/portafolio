@@ -10,7 +10,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	min-height: 300px;
 	cursor: pointer;
-	border-radius: 8px 0 0 8px;
+	border-bottom-left-radius: 8px;
 
 	@media (max-width: 764px) {
 		border-radius: 0px;

@@ -16,9 +16,10 @@ export const Container = styled.div`
 `;
 
 export const VscodeContainer = styled(motion.div)`
-	max-width: 1100px;
+	max-width: 1000px;
 	display: block;
 	margin: -40px auto;
+	transition: all 1ms ease;
 
 	@media (max-width: 764px) {
 		position: absolute;

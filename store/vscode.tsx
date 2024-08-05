@@ -7,6 +7,8 @@ interface IVisualStudioCode {
 	setFileSelected: (fileSelected: string) => void;
 	tabSelected: number | undefined;
 	setTabSelected: (tabSelected: number) => void;
+	show: boolean;
+	setShow: (show: boolean) => void;
 }
 
 const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
@@ -20,6 +22,8 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),
 	tabSelected: 0,
 	setTabSelected: (tabSelected: number) => set({ tabSelected: tabSelected }),
+	show: true,
+	setShow: (show: boolean) => set({ show: show }),
 }));
 
 export default useVisualStudioCode;
