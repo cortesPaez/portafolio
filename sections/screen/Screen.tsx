@@ -18,10 +18,7 @@ export const Screen = () => {
 				<DesktopIcon icon="spotify" />
 			</Container>
 			{show && (
-				<VscodeContainer
-					drag={typeof width === 'number' && width > 764 ? true : 'y'}
-					dragMomentum={false}
-				>
+				<VscodeContainer drag={typeof width === 'number' && width > 764} dragMomentum={false}>
 					<VisualStudioCode />
 				</VscodeContainer>
 			)}
