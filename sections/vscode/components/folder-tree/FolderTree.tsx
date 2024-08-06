@@ -10,7 +10,7 @@ import 'react-tree-folder/dist/style.css';
 // 	ssr: false,
 // });
 
-export const Folders = ({ treeState }: any) => {
+export const Folders = () => {
 	const tree: Tree = [
 		{
 			text: 'Some Folder',

@@ -4,7 +4,7 @@ import { FolderTree } from '..';
 import { Sidebar } from '../sidebar/Sidebar';
 import { useScreenSize } from '@/hooks/useScreenSize';
 
-export const FileList = ({ treeState }: any) => {
+export const FileList = () => {
 	const { width } = useScreenSize();
 	return (
 		<FileListContainer>
@@ -15,7 +15,7 @@ export const FileList = ({ treeState }: any) => {
 						<FileListLabel>EXPLORER</FileListLabel>
 						<DotsIcon />
 					</FileListLabelContainer>
-					<FolderTree treeState={treeState} />
+					<FolderTree />
 				</Container>
 			)}
 		</FileListContainer>

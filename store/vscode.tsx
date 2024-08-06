@@ -1,8 +1,6 @@
 import { create } from 'zustand';
-import { NodeData } from 'react-folder-tree';
 
 interface IVisualStudioCode {
-	treeState: NodeData;
 	fileSelected: string;
 	setFileSelected: (fileSelected: string) => void;
 	tabSelected: number | undefined;

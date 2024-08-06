@@ -5,7 +5,7 @@ import { Screen, ScreenBar } from './styles';
 import useVisualStudioCode from '@/store/vscode';
 
 const VisualStudioCode = () => {
-	const { show, setShow, treeState } = useVisualStudioCode();
+	const { show, setShow } = useVisualStudioCode();
 
 	return (
 		<>
@@ -38,7 +38,7 @@ const VisualStudioCode = () => {
 				</div>
 			</ScreenBar>
 			<Screen>
-				<FileList treeState={treeState} />
+				<FileList />
 				<Tabs />
 			</Screen>
 		</>
