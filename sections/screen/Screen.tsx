@@ -35,9 +35,9 @@ export const Screen = () => {
 					<Drag
 						drag={typeof width === 'number' && width > 764}
 						dragMomentum={false}
-						initial={{ scale: 0 }}
-						animate={{ scale: 1 }}
-						exit={{ scale: 0, transform: 'translateY(500px)' }}
+						initial={{ transform: 'translateY(500px)' }}
+						animate={{ transform: 'translateY(0px)' }}
+						exit={{ transform: 'translateY(500px)' }}
 						transition={{ ease: easeIn }}
 					>
 						<VisualStudioCode />
