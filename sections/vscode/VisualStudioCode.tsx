@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 import { FileList } from './components';
 import Tabs from './components/tabs/Tabs';
 import { Screen, ScreenBar } from './styles';

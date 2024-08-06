@@ -1,16 +1,16 @@
 import React from 'react';
 import { Drag, IconLabel } from './styles';
-import { FileIcon, OperaIcon, SpotifyDesktopIcon } from '../icons';
+import { FileIcon, PdfIcon, SpotifyDesktopIcon } from '../icons';
 
 interface IDesktopIcon {
-	icon: 'opera' | 'spotify' | 'file';
+	icon: 'pdf' | 'spotify' | 'file';
 }
 
 export const DesktopIcon = ({ icon }: IDesktopIcon) => {
 	const iconMap = new Map([
-		['opera', { icon: <OperaIcon key="opera" />, text: 'Curriculum' }],
-		['file', { icon: <FileIcon key="file" />, text: 'Archivos' }],
-		['spotify', { icon: <SpotifyDesktopIcon key="spotify" />, text: 'Spotify' }],
+		['pdf', { icon: <PdfIcon key="opera" />, text: 'Curriculum' }],
+		// ['file', { icon: <FileIcon key="file" />, text: 'Archivos' }],
+		// ['spotify', { icon: <SpotifyDesktopIcon key="spotify" />, text: 'Spotify' }],
 	]);
 
 	return (

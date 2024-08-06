@@ -65,6 +65,7 @@ export const HoursWindows = styled.span`
 	font-size: 12px;
 	color: #fff;
 	text-align: end;
+	text-wrap: nowrap;
 `;
 
 export const WifiSoundContainer = styled.div`

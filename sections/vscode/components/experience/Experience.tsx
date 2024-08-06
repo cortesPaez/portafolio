@@ -5,7 +5,14 @@ import Socius from '../../../../public/experience/socius.png';
 import Etpay from '../../../../public/experience/etpay.png';
 import Birchamn from '../../../../public/experience/birchman.jpg';
 
-import { BadgeContainer, Card, CardBody, EmployerContainer, InfoContainer } from './styles';
+import {
+	BadgeContainer,
+	Card,
+	CardBody,
+	Container,
+	EmployerContainer,
+	InfoContainer,
+} from './styles';
 
 interface IWorkExperience {
 	image: ReactNode;
@@ -52,7 +59,7 @@ export const Experience = () => {
 	];
 
 	return (
-		<div style={{ maxHeight: '90%', overflowY: 'scroll' }}>
+		<Container>
 			{workExperience.map(({ image, company, title, time, description, badge }) => (
 				<Card key={company}>
 					<CardBody>
@@ -80,6 +87,6 @@ export const Experience = () => {
 					</CardBody>
 				</Card>
 			))}
-		</div>
+		</Container>
 	);
 };

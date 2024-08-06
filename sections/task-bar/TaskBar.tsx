@@ -21,7 +21,7 @@ import {
 import useVisualStudioCode from '@/store/vscode';
 
 export const TaskBar = () => {
-	const { setShow: setShowVsCode } = useVisualStudioCode();
+	const { show: showVscode, setShow: setShowVscode } = useVisualStudioCode();
 	const [currentTime, setCurrentTime] = useState(new Date());
 
 	useEffect(() => {
@@ -35,7 +35,7 @@ export const TaskBar = () => {
 	const appIcons = [
 		<WindowsIcon key="windows" />,
 		<ScreenIcon key="screen" />,
-		<VsCodeIcon key="vscode" onClick={() => setShowVsCode(true)} />,
+		<VsCodeIcon key="vscode" onClick={() => setShowVscode(!showVscode)} />,
 		<FilesIcon key="file" />,
 	];
 

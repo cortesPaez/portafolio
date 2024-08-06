@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TabContainer = styled.div`
 	background-color: #292929;
+	width: 100%;
 
 	@media (max-width: 764px) {
 		padding-bottom: 16px;

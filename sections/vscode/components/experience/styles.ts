@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+	overflow-y: auto;
+	height: 100%;
+`;
+
 export const Card = styled.div`
 	background-color: #1e1e1e;
-	border-bottom-right-radius: 8px;
 	display: flex;
 	padding: 24px;
 

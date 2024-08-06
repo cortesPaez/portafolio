@@ -22,7 +22,7 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),
 	tabSelected: 0,
 	setTabSelected: (tabSelected: number) => set({ tabSelected: tabSelected }),
-	show: true,
+	show: false,
 	setShow: (show: boolean) => set({ show: show }),
 }));
 

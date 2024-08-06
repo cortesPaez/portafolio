@@ -7,6 +7,7 @@ export const ScreenContainer = styled.div`
 	max-height: 100svh;
 	overflow: hidden;
 	background-color: #011627;
+	position: relative;
 `;
 
 export const Container = styled.div`
@@ -15,12 +16,11 @@ export const Container = styled.div`
 	padding: 20px;
 `;
 
-export const VscodeContainer = styled(motion.div)`
+export const Drag = styled(motion.div)`
 	max-width: 1000px;
 	display: block;
 	margin: -40px auto;
 	transition: all 1ms ease;
-
 	@media (max-width: 764px) {
 		position: absolute;
 		top: 0px;
