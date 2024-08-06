@@ -17,6 +17,20 @@ export const ScreenContainer = styled.div`
 		background-position: center;
 		background-size: cover;
 	}
+
+	@keyframes blur-in {
+		0% {
+			filter: blur(12px);
+			opacity: 0;
+		}
+
+		100% {
+			filter: blur(0);
+			opacity: 1;
+		}
+	}
+
+	animation: blur-in 1s linear both;
 `;
 
 export const Container = styled.div`

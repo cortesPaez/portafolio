@@ -1,33 +1,30 @@
 {
-  "name": "portafolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@codemirror/lang-javascript": "^6.2.2",
-    "@lezer/highlight": "^1.2.0",
-    "@uiw/codemirror-theme-vscode": "^4.23.0",
-    "@uiw/codemirror-themes": "^4.23.0",
-    "@uiw/react-codemirror": "^4.23.0",
-    "framer-motion": "^11.3.19",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-folder-tree": "^5.1.1",
-    "styled-components": "^6.1.12",
-    "zustand": "^4.5.4"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "typescript": "^5"
-  }
+	"name": "portafolio",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@monaco-editor/react": "^4.6.0",
+		"framer-motion": "^11.3.19",
+		"next": "14.2.5",
+		"react": "^18",
+		"react-dom": "^18",
+		"react-file-navigator": "^1.0.2-dev.1",
+		"react-tree-folder": "^0.2.3",
+		"styled-components": "^6.1.12",
+		"zustand": "^4.5.4"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"eslint": "^8",
+		"eslint-config-next": "14.2.5",
+		"typescript": "^5"
+	}
 }

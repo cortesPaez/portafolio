@@ -5,7 +5,7 @@ import { DesktopIcon } from '@/components/desktop-icon/DesktopIcon';
 import VisualStudioCode from '../vscode/VisualStudioCode';
 import { useScreenSize } from '@/hooks/useScreenSize';
 import useVisualStudioCode from '@/store/vscode';
-import { AnimatePresence, easeIn } from 'framer-motion';
+import { AnimatePresence, easeIn, motion } from 'framer-motion';
 
 export const Screen = () => {
 	const { show } = useVisualStudioCode();
@@ -28,20 +28,20 @@ export const Screen = () => {
 					src="https://drive.google.com/file/d/1yH9_vfZFzPoTWljExlQvpyhzXfOmEguG/preview"
 					width="640"
 					height="580"
+					style={{ position: 'absolute', zIndex: 1 }}
 				></iframe> */}
 			</Drag>
 			<AnimatePresence>
 				{show && (
-					<Drag
-						drag={typeof width === 'number' && width > 764}
-						dragMomentum={false}
-						initial={{ transform: 'translateY(500px)' }}
-						animate={{ transform: 'translateY(0px)' }}
-						exit={{ transform: 'translateY(500px)' }}
-						transition={{ ease: easeIn }}
-					>
-						<VisualStudioCode />
-					</Drag>
+					<motion.div drag={typeof width === 'number' && width > 764} dragMomentum={false}>
+						<Drag
+							initial={{ transform: 'translateY(900px) scale(0)' }}
+							animate={{ transform: 'translateY(0px) scale(1)' }}
+							exit={{ transform: 'translateY(600px) scale(0)' }}
+						>
+							<VisualStudioCode />
+						</Drag>
+					</motion.div>
 				)}
 			</AnimatePresence>
 		</ScreenContainer>

@@ -1,19 +1,54 @@
-import 'react-folder-tree/dist/style.css';
-import dynamic from 'next/dynamic';
+// import 'react-folder-tree/dist/style.css';
 import useVisualStudioCode from '@/store/vscode';
 import { FolderTreeContainer } from './styles';
+import { TreeFolder, type Tree } from 'react-tree-folder';
 
-const FolderTree = dynamic(() => import('react-folder-tree'), {
-	ssr: false,
-});
+// import this in your global layout
+// if you use this on multiple pages
+import 'react-tree-folder/dist/style.css';
+// const FolderTree = dynamic(() => import('react-folder-tree'), {
+// 	ssr: false,
+// });
 
 export const Folders = ({ treeState }: any) => {
-	const { setFileSelected, setTabSelected } = useVisualStudioCode();
-	const onTreeStateChange = (state: any, event: any) => console.log(state, event);
+	const tree: Tree = [
+		{
+			text: 'Some Folder',
+			dir: true,
+			folderIcon: {
+				closed: '📁',
+				open: '📂',
+				// a react element will also work
+			},
+
+			// a directory may be open by default
+			open: true,
+
+			// a directory may contain
+			// other directories or files
+			branch: [
+				{
+					text: 'Sub Folder',
+					dir: true,
+					folderIcon: {
+						closed: '📁',
+						open: '📂',
+						// a react element will also work
+					},
+				},
+				{
+					text: 'Sub File',
+				},
+			],
+		},
+		{
+			text: 'Some File',
+		},
+	];
 
 	return (
 		<FolderTreeContainer>
-			<FolderTree
+			{/* <FolderTree
 				showCheckbox={false}
 				data={treeState}
 				onChange={onTreeStateChange}
@@ -22,7 +57,10 @@ export const Folders = ({ treeState }: any) => {
 					setTabSelected(Number(nodeData.path));
 				}}
 				readOnly
-			></FolderTree>
+			></FolderTree> */}
+			<div style={{ height: '100vh' }}>
+				<TreeFolder tree={tree} />
+			</div>
 		</FolderTreeContainer>
 	);
 };

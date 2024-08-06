@@ -1,10 +1,7 @@
-import { javascript } from '@codemirror/lang-javascript';
-import { vscodeDark } from '@uiw/codemirror-theme-vscode';
-import CodeMirror from '@uiw/react-codemirror';
 import useVisualStudioCode from '@/store/vscode';
 import { Tab, TabContainer, TabFlex } from './styles';
 import { Experience } from '../experience/Experience';
-
+import { Editor } from '@monaco-editor/react';
 const Tabs = () => {
 	const { tabSelected, setTabSelected } = useVisualStudioCode();
 
@@ -26,13 +23,12 @@ export const Presentation = () => {
 			title: 'Presentation.tsx',
 			active: false,
 			panel: (
-				<CodeMirror
+				<Editor
 					value={PRESENTATION}
-					height="608px"
-					extensions={[javascript({ jsx: true })]}
-					theme={vscodeDark}
-					indentWithTab
-					readOnly
+					height="645px"
+					defaultLanguage="javascript"
+					defaultValue="// some comment"
+					theme="vs-dark"
 				/>
 			),
 		},
@@ -53,7 +49,9 @@ export const Presentation = () => {
 						</Tab>
 					))}
 			</TabFlex>
-			{typeof tabSelected === 'number' && tab[tabSelected].panel}
+			<div style={{ height: '100%' }}>
+				{typeof tabSelected === 'number' && tab[tabSelected].panel}
+			</div>
 		</TabContainer>
 	);
 };

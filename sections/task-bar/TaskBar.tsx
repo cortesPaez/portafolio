@@ -13,7 +13,6 @@ import {
 	FilesIcon,
 	ScreenIcon,
 	SoundIcon,
-	SpotifyIcon,
 	VsCodeIcon,
 	WifiIcon,
 	WindowsIcon,
