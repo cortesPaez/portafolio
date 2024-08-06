@@ -35,7 +35,7 @@ export const TaskBar = () => {
 	const appIcons = [
 		<WindowsIcon key="windows" />,
 		<ScreenIcon key="screen" />,
-		<VsCodeIcon key="vscode" onClick={() => setShowVscode(!showVscode)} />,
+		<VsCodeIcon key="vscode" />,
 		<FilesIcon key="file" />,
 	];
 
@@ -64,7 +64,9 @@ export const TaskBar = () => {
 				<div style={{ width: '100%' }}></div>
 				<AppIconContainer>
 					{appIcons.map((icon, i) => (
-						<IconContainer key={i}>{icon}</IconContainer>
+						<IconContainer key={i} onClick={() => setShowVscode(!showVscode)}>
+							{icon}
+						</IconContainer>
 					))}
 				</AppIconContainer>
 				<WindowsIconContainer>
