@@ -7,7 +7,16 @@ export const ScreenContainer = styled.div`
 	max-height: 100svh;
 	overflow: hidden;
 	background-color: #011627;
+	background-image: url('https://images4.alphacoders.com/132/1327480.png');
 	position: relative;
+	background-position: center;
+	background-size: cover;
+
+	@media (max-width: 764px) {
+		background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/01/darth-vader-art-wallpaper.jpg');
+		background-position: center;
+		background-size: cover;
+	}
 `;
 
 export const Container = styled.div`
