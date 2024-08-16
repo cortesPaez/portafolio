@@ -13,7 +13,7 @@ import 'react-tree-folder/dist/style.css';
 export const Folders = () => {
 	const tree: Tree = [
 		{
-			text: 'Some Folder',
+			text: 'src',
 			dir: true,
 			folderIcon: {
 				closed: '📁',
@@ -58,9 +58,7 @@ export const Folders = () => {
 				}}
 				readOnly
 			></FolderTree> */}
-			<div style={{ height: '100vh' }}>
-				<TreeFolder tree={tree} />
-			</div>
+			<TreeFolder tree={tree} />
 		</FolderTreeContainer>
 	);
 };

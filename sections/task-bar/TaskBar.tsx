@@ -1,4 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import Arrow from '../../public/windows/arrow.svg';
+import Folder from '../../public/windows/folder.svg';
+import Image from 'next/image';
+import Screen from '../../public/windows/screen.svg';
+import Sound from '../../public/windows/sound.svg';
+import Vscode from '../../public/windows/vscode.svg';
+import Wifi from '../../public/windows/wifi.svg';
+import Windows from '../../public/windows/windows.svg';
+
 import {
 	AppIconContainer,
 	AppsBar,
@@ -8,15 +17,6 @@ import {
 	WifiSoundContainer,
 	WindowsIconContainer,
 } from './styles';
-import {
-	ArrowIcon,
-	FilesIcon,
-	ScreenIcon,
-	SoundIcon,
-	VsCodeIcon,
-	WifiIcon,
-	WindowsIcon,
-} from '../../components/icons';
 import useVisualStudioCode from '@/store/vscode';
 
 export const TaskBar = () => {
@@ -32,27 +32,36 @@ export const TaskBar = () => {
 	}, []);
 
 	const appIcons = [
-		<WindowsIcon key="windows" />,
-		<ScreenIcon key="screen" />,
-		<VsCodeIcon key="vscode" />,
-		<FilesIcon key="file" />,
+		<Image src={Windows} height={24} width={24} alt="windows" key="windows" loading="lazy" />,
+		<Image src={Screen} height={24} width={24} alt="screen" key="screen" loading="lazy" />,
+		<Image src={Vscode} height={24} width={24} alt="vscode" key="vscode" loading="lazy" />,
+		<Image src={Folder} height={24} width={24} alt="folder" key="folder" loading="lazy" />,
 	];
 
+	function formatDate(date: Date) {
+		let d = new Date(date);
+		let day = ('0' + d.getDate()).slice(-2);
+		let month = ('0' + (d.getMonth() + 1)).slice(-2);
+		let year = d.getFullYear();
+		return `${day}-${month}-${year}`;
+	}
+
 	const iconsWindows = [
-		<ArrowIcon style={{ marginTop: '5px', padding: '8px' }} key="arrow" />,
+		<Image src={Arrow} height={24} width={24} alt="arrow" key="arrow" loading="lazy" />,
+
 		<WifiSoundContainer key="">
-			<WifiIcon key="wifi" />
-			<SoundIcon key="sound" />
+			<Image src={Wifi} height={24} width={24} alt="wifi" key="wifi" loading="lazy" />,
+			<Image src={Sound} height={24} width={24} alt="sound" key="sound" loading="lazy" />,
 		</WifiSoundContainer>,
 		<>
 			<HoursWindows>
-				{currentTime.toLocaleTimeString('en-us', {
+				{currentTime.toLocaleTimeString(undefined, {
 					hour: '2-digit',
 					minute: '2-digit',
 					hour12: false,
 				})}
 				<br />
-				<HoursWindows>{currentTime.toLocaleDateString()}</HoursWindows>
+				<HoursWindows>{formatDate(new Date())}</HoursWindows>
 			</HoursWindows>
 		</>,
 	];

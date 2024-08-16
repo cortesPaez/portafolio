@@ -3,17 +3,16 @@ import styled from 'styled-components';
 
 export const ScreenContainer = styled.div`
 	width: 100%;
-	height: 100svh;
-	max-height: 100svh;
-	overflow: hidden;
+	height: calc(100svh - 50px);
+	/* overflow: hidden; */
 	background-color: #011627;
-	background-image: url('https://images4.alphacoders.com/132/1327480.png');
+	/* background-image: url('https://images4.alphacoders.com/132/1327480.png'); */
 	position: relative;
 	background-position: center;
 	background-size: cover;
-
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	@media (max-width: 764px) {
-		background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/01/darth-vader-art-wallpaper.jpg');
+		/* background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/01/darth-vader-art-wallpaper.jpg'); */
 		background-position: center;
 		background-size: cover;
 	}
@@ -49,5 +48,19 @@ export const Drag = styled(motion.div)`
 		top: 0px;
 		width: 100%;
 		margin: 0;
+	}
+`;
+
+export const Pdf = styled.iframe`
+	width: 50%;
+	height: 80%;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+
+	@media (max-width: 764px) {
+		width: 94%;
+		left: 0;
+		height: 500px;
 	}
 `;

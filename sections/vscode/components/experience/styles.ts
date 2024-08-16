@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	overflow-y: auto;
-	min-height: 100%;
+	height: 100%;
+
+	@media (max-width: 764px) {
+		height: calc(100svh - 120px);
+	}
 `;
 
 export const Card = styled.div`

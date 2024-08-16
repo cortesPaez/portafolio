@@ -1,14 +1,14 @@
 'use client';
 import { useRef } from 'react';
-import { Container, ScreenContainer, Drag } from './styles';
+import { Container, ScreenContainer, Drag, Pdf } from './styles';
 import { DesktopIcon } from '@/components/desktop-icon/DesktopIcon';
 import VisualStudioCode from '../vscode/VisualStudioCode';
 import { useScreenSize } from '@/hooks/useScreenSize';
 import useVisualStudioCode from '@/store/vscode';
-import { AnimatePresence, easeIn, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 export const Screen = () => {
-	const { show } = useVisualStudioCode();
+	const { show, showPdf } = useVisualStudioCode();
 	const { width } = useScreenSize();
 	const constraintsRef = useRef(null);
 
@@ -16,32 +16,21 @@ export const Screen = () => {
 		<ScreenContainer ref={constraintsRef}>
 			<Container>
 				<DesktopIcon icon="pdf" />
-				<DesktopIcon icon="file" />
-				<DesktopIcon icon="spotify" />
 			</Container>
-			<Drag
-				style={{ padding: '10px' }}
-				drag={typeof width === 'number' && width > 764}
-				dragMomentum={false}
-			>
-				{/* <iframe
-					src="https://drive.google.com/file/d/1yH9_vfZFzPoTWljExlQvpyhzXfOmEguG/preview"
-					width="640"
-					height="580"
-					style={{ position: 'absolute', zIndex: 1 }}
-				></iframe> */}
-			</Drag>
+			{showPdf && (
+				<Drag
+					style={{ padding: '10px' }}
+					drag={typeof width === 'number' && width > 764}
+					dragMomentum={false}
+				>
+					<Pdf src="https://drive.google.com/file/d/1yH9_vfZFzPoTWljExlQvpyhzXfOmEguG/preview"></Pdf>
+				</Drag>
+			)}
 			<AnimatePresence>
 				{show && (
-					<motion.div drag={typeof width === 'number' && width > 764} dragMomentum={false}>
-						<Drag
-							initial={{ transform: 'translateY(900px) scale(0)' }}
-							animate={{ transform: 'translateY(0px) scale(1)' }}
-							exit={{ transform: 'translateY(600px) scale(0)' }}
-						>
-							<VisualStudioCode />
-						</Drag>
-					</motion.div>
+					<Drag drag={typeof width === 'number' && width > 764} dragMomentum={false}>
+						<VisualStudioCode />
+					</Drag>
 				)}
 			</AnimatePresence>
 		</ScreenContainer>

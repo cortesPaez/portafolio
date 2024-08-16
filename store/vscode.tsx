@@ -7,6 +7,8 @@ interface IVisualStudioCode {
 	setTabSelected: (tabSelected: number) => void;
 	show: boolean;
 	setShow: (show: boolean) => void;
+	showPdf: boolean;
+	setShowPdf: (showPdf: boolean) => void;
 }
 
 const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
@@ -14,7 +16,7 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 		name: 'src',
 		checked: 0.5,
 		isOpen: true,
-		children: [{ name: 'Presentation.tsx' }, { name: 'workExperience.ts' }],
+		children: [{ name: 'presentation.tsx' }, { name: 'work-experience.ts' }],
 	},
 	fileSelected: '',
 	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),
@@ -22,6 +24,8 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 	setTabSelected: (tabSelected: number) => set({ tabSelected: tabSelected }),
 	show: false,
 	setShow: (show: boolean) => set({ show: show }),
+	showPdf: false,
+	setShowPdf: (showPdf: boolean) => set({ showPdf }),
 }));
 
 export default useVisualStudioCode;

@@ -1,21 +1,34 @@
 import useVisualStudioCode from '@/store/vscode';
-import { Tab, TabContainer, TabFlex } from './styles';
+import { EditorContainer, Tab, TabContainer, TabFlex } from './styles';
 import { Experience } from '../experience/Experience';
 import { Editor } from '@monaco-editor/react';
+
 const Tabs = () => {
 	const { tabSelected, setTabSelected } = useVisualStudioCode();
 
-	const PRESENTATION = `import { useState } from 'react';
+	const PRESENTATION = `interface IDev {
+	name: string;
+	career: string;
+	email: string;
+	phone: number;
+	specialization: string;
+	skills: string[]
+	location: string;
+}
 
-export const Presentation = () => {
-	const [presentation, setPresentation] = useState<IPresentationData>(defaultState);
-	setPresentation({
-		name: 'Cristóbal Cortés Páez',
-		location: 'Santiago, Chile',
-		career: 'Analista Programador',
-		specialization: 'Front End',
-	});
-};
+export const Presentation: Function = (dev: IDev): IDev => {
+	if (!dev)
+		return ({
+			name: 'Cristóbal Cortés Páez',
+			career: 'Analista Programador',
+			email: 'cristobal.cortespaez@gmail.com',
+			phone: 936870299,
+			specialization: 'Front End',
+			location: 'Santiago, Chile',
+			skills: ['ReactJS', 'Typescript', 'NodeJS'],
+		})
+		return dev
+	}
 `;
 
 	const tab = [
@@ -23,13 +36,14 @@ export const Presentation = () => {
 			title: 'Presentation.tsx',
 			active: false,
 			panel: (
-				<Editor
-					value={PRESENTATION}
-					height="645px"
-					defaultLanguage="javascript"
-					defaultValue="// some comment"
-					theme="vs-dark"
-				/>
+				<EditorContainer>
+					<Editor
+						value={PRESENTATION}
+						language="typescript"
+						theme="vs-dark"
+						options={{ tabSize: 2 }}
+					/>
+				</EditorContainer>
 			),
 		},
 		{
@@ -49,9 +63,7 @@ export const Presentation = () => {
 						</Tab>
 					))}
 			</TabFlex>
-			<div style={{ height: '100%' }}>
-				{typeof tabSelected === 'number' && tab[tabSelected].panel}
-			</div>
+			{typeof tabSelected === 'number' && tab[tabSelected].panel}
 		</TabContainer>
 	);
 };

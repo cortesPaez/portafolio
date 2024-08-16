@@ -1,20 +1,33 @@
 import React from 'react';
 import { Drag, IconLabel } from './styles';
-import { FileIcon, PdfIcon, SpotifyDesktopIcon } from '../icons';
+import Pdf from '../../public/windows/pdf.svg';
+import useVisualStudioCode from '@/store/vscode';
+import Image from 'next/image';
 
 interface IDesktopIcon {
 	icon: 'pdf' | 'spotify' | 'file';
 }
 
 export const DesktopIcon = ({ icon }: IDesktopIcon) => {
+	const { showPdf, setShowPdf } = useVisualStudioCode();
 	const iconMap = new Map([
-		['pdf', { icon: <PdfIcon key="opera" />, text: 'Curriculum' }],
-		// ['file', { icon: <FileIcon key="file" />, text: 'Archivos' }],
-		// ['spotify', { icon: <SpotifyDesktopIcon key="spotify" />, text: 'Spotify' }],
+		[
+			'pdf',
+			{
+				icon: <Image src={Pdf} alt="pdf" key="pdf" loading="lazy" />,
+				text: 'Curriculum',
+			},
+		],
 	]);
 
 	return (
-		<Drag drag dragMomentum={false}>
+		<Drag
+			drag
+			dragMomentum={false}
+			onClick={() => {
+				icon === 'pdf' && setShowPdf(!showPdf);
+			}}
+		>
 			{iconMap.get(icon)?.icon}
 			<IconLabel>{iconMap.get(icon)?.text}</IconLabel>
 		</Drag>

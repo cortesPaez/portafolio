@@ -26,7 +26,9 @@ interface IWorkExperience {
 export const Experience = () => {
 	const workExperience: IWorkExperience[] = [
 		{
-			image: <Image src={Socius} width={120} height={120} alt="Picture of the author" />,
+			image: (
+				<Image src={Socius} width={120} height={120} alt="Picture of the author" loading="lazy" />
+			),
 			company: 'SOCIUS',
 			title: 'Desarrollador FrontEnd en SOCIUS',
 			time: 'Mayo 2024 - Julio 2024',
@@ -34,7 +36,9 @@ export const Experience = () => {
 			badge: ['ReactJS', 'Typescript', 'Redux', 'Storybook', 'Gitlab', 'Git'],
 		},
 		{
-			image: <Image src={Etpay} width={120} height={40} alt="Picture of the author" />,
+			image: (
+				<Image src={Etpay} width={120} height={40} alt="Picture of the author" loading="lazy" />
+			),
 			company: 'Etpay',
 			title: 'Desarrollador FrontEnd en ETPay',
 			time: 'Agosto 2023 - Abril 2024',
@@ -45,7 +49,9 @@ export const Experience = () => {
 			badge: ['ReactJS', 'Typescript', 'Redux', 'Storybook', 'Gitlab', 'Git', 'styled-components'],
 		},
 		{
-			image: <Image src={Birchamn} width={120} height={120} alt="Picture of the author" />,
+			image: (
+				<Image src={Birchamn} width={120} height={120} alt="Picture of the author" loading="lazy" />
+			),
 			company: 'Etpay',
 			title: 'Desarrollador FrontEnd en Birchman Group',
 			time: 'Mayo 2023 - Agosto 2023',
