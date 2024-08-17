@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const EditorContainer = styled.div`
 	& > section {
-		height: 634.4px !important;
+		height: 500px !important;
 
 		@media (max-width: 764px) {
 			height: calc(100svh - 120px) !important;
@@ -12,9 +12,11 @@ export const EditorContainer = styled.div`
 
 export const TabContainer = styled.div`
 	background-color: #292929;
+	height: 500px;
 	width: 100%;
 
 	@media (max-width: 764px) {
+		height: 100%;
 		border-radius: 0px;
 		width: 100%;
 	}

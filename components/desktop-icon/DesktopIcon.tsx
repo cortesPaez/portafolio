@@ -1,4 +1,3 @@
-import React from 'react';
 import { Drag, IconLabel } from './styles';
 import Pdf from '../../public/windows/pdf.svg';
 import useVisualStudioCode from '@/store/vscode';
@@ -14,22 +13,24 @@ export const DesktopIcon = ({ icon }: IDesktopIcon) => {
 		[
 			'pdf',
 			{
-				icon: <Image src={Pdf} alt="pdf" key="pdf" loading="lazy" />,
+				icon: <Image src={Pdf} alt="pdf" key="pdf" loading="lazy" width={51} priority={false} />,
 				text: 'Curriculum',
 			},
 		],
 	]);
 
 	return (
-		<Drag
-			drag
-			dragMomentum={false}
-			onClick={() => {
-				icon === 'pdf' && setShowPdf(!showPdf);
-			}}
-		>
-			{iconMap.get(icon)?.icon}
-			<IconLabel>{iconMap.get(icon)?.text}</IconLabel>
-		</Drag>
+		<>
+			<Drag
+				drag
+				dragMomentum={false}
+				onClick={() => {
+					icon === 'pdf' && setShowPdf(!showPdf);
+				}}
+			>
+				{iconMap.get(icon)?.icon}
+				<IconLabel>{iconMap.get(icon)?.text}</IconLabel>
+			</Drag>
+		</>
 	);
 };

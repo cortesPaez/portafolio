@@ -7,7 +7,7 @@ import { useScreenSize } from '@/hooks/useScreenSize';
 import useVisualStudioCode from '@/store/vscode';
 import { AnimatePresence } from 'framer-motion';
 
-export const Screen = () => {
+const Screen = () => {
 	const { show, showPdf } = useVisualStudioCode();
 	const { width } = useScreenSize();
 	const constraintsRef = useRef(null);
@@ -18,13 +18,11 @@ export const Screen = () => {
 				<DesktopIcon icon="pdf" />
 			</Container>
 			{showPdf && (
-				<Drag
-					style={{ padding: '10px' }}
-					drag={typeof width === 'number' && width > 764}
+				<Pdf
+					drag
 					dragMomentum={false}
-				>
-					<Pdf src="https://drive.google.com/file/d/1yH9_vfZFzPoTWljExlQvpyhzXfOmEguG/preview"></Pdf>
-				</Drag>
+					src="https://drive.google.com/file/d/1yH9_vfZFzPoTWljExlQvpyhzXfOmEguG/preview"
+				/>
 			)}
 			<AnimatePresence>
 				{show && (
@@ -36,3 +34,5 @@ export const Screen = () => {
 		</ScreenContainer>
 	);
 };
+
+export default Screen;

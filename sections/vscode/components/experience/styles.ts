@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	overflow-y: auto;
-	height: 100%;
+	max-height: 93%;
 
 	@media (max-width: 764px) {
 		height: calc(100svh - 120px);

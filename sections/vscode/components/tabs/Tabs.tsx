@@ -25,7 +25,8 @@ export const Presentation: Function = (dev: IDev): IDev => {
 			phone: 936870299,
 			specialization: 'Front End',
 			location: 'Santiago, Chile',
-			skills: ['ReactJS', 'Typescript', 'NodeJS'],
+			skills: ['ReactJS', 'Typescript',
+							 'NodeJS', 'UI', 'Agile Scrum Methodology'],
 		})
 		return dev
 	}

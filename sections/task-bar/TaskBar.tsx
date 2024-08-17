@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Arrow from '../../public/windows/arrow.svg';
 import Folder from '../../public/windows/folder.svg';
@@ -32,10 +33,42 @@ export const TaskBar = () => {
 	}, []);
 
 	const appIcons = [
-		<Image src={Windows} height={24} width={24} alt="windows" key="windows" loading="lazy" />,
-		<Image src={Screen} height={24} width={24} alt="screen" key="screen" loading="lazy" />,
-		<Image src={Vscode} height={24} width={24} alt="vscode" key="vscode" loading="lazy" />,
-		<Image src={Folder} height={24} width={24} alt="folder" key="folder" loading="lazy" />,
+		<Image
+			priority={false}
+			src={Windows}
+			height={24}
+			width={24}
+			alt="windows"
+			key="windows"
+			loading="lazy"
+		/>,
+		<Image
+			priority={false}
+			src={Screen}
+			height={24}
+			width={24}
+			alt="screen"
+			key="screen"
+			loading="lazy"
+		/>,
+		<Image
+			priority={false}
+			src={Vscode}
+			height={24}
+			width={24}
+			alt="vscode"
+			key="vscode"
+			loading="lazy"
+		/>,
+		<Image
+			priority={false}
+			src={Folder}
+			height={24}
+			width={24}
+			alt="folder"
+			key="folder"
+			loading="lazy"
+		/>,
 	];
 
 	function formatDate(date: Date) {
@@ -47,13 +80,37 @@ export const TaskBar = () => {
 	}
 
 	const iconsWindows = [
-		<Image src={Arrow} height={24} width={24} alt="arrow" key="arrow" loading="lazy" />,
+		<Image
+			priority={false}
+			src={Arrow}
+			height={20}
+			width={20}
+			alt="arrow"
+			key="arrow"
+			loading="lazy"
+		/>,
 
 		<WifiSoundContainer key="">
-			<Image src={Wifi} height={24} width={24} alt="wifi" key="wifi" loading="lazy" />,
-			<Image src={Sound} height={24} width={24} alt="sound" key="sound" loading="lazy" />,
+			<Image
+				priority={false}
+				src={Wifi}
+				height={20}
+				width={20}
+				alt="wifi"
+				key="wifi"
+				loading="lazy"
+			/>
+			<Image
+				priority={false}
+				src={Sound}
+				height={20}
+				width={20}
+				alt="sound"
+				key="sound"
+				loading="lazy"
+			/>
 		</WifiSoundContainer>,
-		<>
+		<div>
 			<HoursWindows>
 				{currentTime.toLocaleTimeString(undefined, {
 					hour: '2-digit',
@@ -63,7 +120,7 @@ export const TaskBar = () => {
 				<br />
 				<HoursWindows>{formatDate(new Date())}</HoursWindows>
 			</HoursWindows>
-		</>,
+		</div>,
 	];
 
 	return (

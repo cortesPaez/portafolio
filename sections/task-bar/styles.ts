@@ -9,7 +9,6 @@ export const Bar = styled.div`
 	z-index: 2;
 	bottom: 0px;
 	width: -webkit-fill-available;
-	opacity: 0.97;
 `;
 
 export const AppsBar = styled.div`

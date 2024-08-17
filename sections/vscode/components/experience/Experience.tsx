@@ -4,6 +4,7 @@ import { Badge, BadgeType } from '../badge/Badge';
 import Socius from '../../../../public/experience/socius.png';
 import Etpay from '../../../../public/experience/etpay.png';
 import Birchamn from '../../../../public/experience/birchman.jpg';
+import Clever from '../../../../public/experience/clever.jpg';
 
 import {
 	BadgeContainer,
@@ -27,7 +28,7 @@ export const Experience = () => {
 	const workExperience: IWorkExperience[] = [
 		{
 			image: (
-				<Image src={Socius} width={120} height={120} alt="Picture of the author" loading="lazy" />
+				<Image priority={false} src={Socius} width={120} height={120} alt="Socius" loading="lazy" />
 			),
 			company: 'SOCIUS',
 			title: 'Desarrollador FrontEnd en SOCIUS',
@@ -37,7 +38,7 @@ export const Experience = () => {
 		},
 		{
 			image: (
-				<Image src={Etpay} width={120} height={40} alt="Picture of the author" loading="lazy" />
+				<Image priority={false} src={Etpay} width={120} height={40} alt="Etpay" loading="lazy" />
 			),
 			company: 'Etpay',
 			title: 'Desarrollador FrontEnd en ETPay',
@@ -50,10 +51,31 @@ export const Experience = () => {
 		},
 		{
 			image: (
-				<Image src={Birchamn} width={120} height={120} alt="Picture of the author" loading="lazy" />
+				<Image
+					priority={false}
+					src={Birchamn}
+					width={120}
+					height={120}
+					alt="Birchamn"
+					loading="lazy"
+				/>
 			),
 			company: 'Etpay',
 			title: 'Desarrollador FrontEnd en Birchman Group',
+			time: 'Mayo 2023 - Agosto 2023',
+			description: [
+				'Inicialización del proyecto para Zurich Santander desde 0 con ViteJS utilizando módulos.',
+				'Creación de inicio de sesión y registro de usuarios con JWT y Session Storage.',
+				'Creación de componetes custom con Material UI.',
+			],
+			badge: ['ReactJS', 'Typescript', 'Material UI', 'Github', 'Git'],
+		},
+		{
+			image: (
+				<Image priority={false} src={Clever} width={120} height={120} alt="clever" loading="lazy" />
+			),
+			company: 'Clever By BICE',
+			title: 'Desarrollador Full Stack en Clever By',
 			time: 'Mayo 2023 - Agosto 2023',
 			description: [
 				'Inicialización del proyecto para Zurich Santander desde 0 con ViteJS utilizando módulos.',
