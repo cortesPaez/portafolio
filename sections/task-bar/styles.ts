@@ -9,6 +9,20 @@ export const Bar = styled.div`
 	z-index: 2;
 	bottom: 0px;
 	width: -webkit-fill-available;
+
+	@keyframes blur-in {
+		0% {
+			filter: blur(12px);
+			opacity: 0;
+		}
+
+		100% {
+			filter: blur(0);
+			opacity: 1;
+		}
+	}
+
+	animation: blur-in 1s linear both;
 `;
 
 export const AppsBar = styled.div`

@@ -15,7 +15,7 @@ export const FileList = () => {
 						<FileListLabel>EXPLORER</FileListLabel>
 						<DotsIcon />
 					</FileListLabelContainer>
-					<FolderTree />
+					{/* <FolderTree /> */}
 				</Container>
 			)}
 		</FileListContainer>

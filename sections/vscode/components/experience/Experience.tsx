@@ -40,7 +40,15 @@ export const Experience = () => {
 		},
 		{
 			image: (
-				<Image priority={false} src={Etpay} width={120} height={40} alt="etpay" loading="lazy" />
+				<Image
+					priority={false}
+					src={Etpay}
+					width={120}
+					height={120}
+					alt="etpay"
+					loading="lazy"
+					style={{ objectFit: 'cover' }}
+				/>
 			),
 			company: 'Etpay',
 			title: 'Desarrollador FrontEnd en ETPay',
