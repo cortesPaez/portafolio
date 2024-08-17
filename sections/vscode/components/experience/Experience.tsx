@@ -5,6 +5,8 @@ import Socius from '../../../../public/experience/socius.png';
 import Etpay from '../../../../public/experience/etpay.png';
 import Birchamn from '../../../../public/experience/birchman.jpg';
 import Clever from '../../../../public/experience/clever.jpg';
+import Bice from '../../../../public/experience/bice.png';
+import Dplace from '../../../../public/experience/dplace.jpg';
 
 import {
 	BadgeContainer,
@@ -38,7 +40,7 @@ export const Experience = () => {
 		},
 		{
 			image: (
-				<Image priority={false} src={Etpay} width={120} height={40} alt="Etpay" loading="lazy" />
+				<Image priority={false} src={Etpay} width={120} height={40} alt="etpay" loading="lazy" />
 			),
 			company: 'Etpay',
 			title: 'Desarrollador FrontEnd en ETPay',
@@ -60,7 +62,7 @@ export const Experience = () => {
 					loading="lazy"
 				/>
 			),
-			company: 'Etpay',
+			company: 'birchman',
 			title: 'Desarrollador FrontEnd en Birchman Group',
 			time: 'Mayo 2023 - Agosto 2023',
 			description: [
@@ -72,17 +74,45 @@ export const Experience = () => {
 		},
 		{
 			image: (
+				<Image priority={false} src={Bice} width={120} height={120} alt="bice" loading="lazy" />
+			),
+			company: 'Banco BICE',
+			title: 'Desarrollador Full Stack en Banco BICE',
+			time: 'Enero 2023 - Mayo 2023',
+			description: [
+				'Migración de servicios a bff.',
+				'Implementación de componentes desde él ui-kit en ReactNative.',
+				'Testing.',
+				'Añadir documentación a los nuevos endpoints en Confluence.',
+			],
+			badge: ['React Native', 'Typescript', 'NodeJS', 'ExpressJS', 'Jest', 'Jira'],
+		},
+		{
+			image: (
 				<Image priority={false} src={Clever} width={120} height={120} alt="clever" loading="lazy" />
 			),
 			company: 'Clever By BICE',
-			title: 'Desarrollador Full Stack en Clever By',
-			time: 'Mayo 2023 - Agosto 2023',
+			title: 'Desarrollador Full Stack en Clever By BICE',
+			time: 'Diciembre 2021 - Diciembre 2022',
 			description: [
-				'Inicialización del proyecto para Zurich Santander desde 0 con ViteJS utilizando módulos.',
-				'Creación de inicio de sesión y registro de usuarios con JWT y Session Storage.',
-				'Creación de componetes custom con Material UI.',
+				'Construcción de componentes en Storybook y nuevas features en los proyectos de Clever con ReactJS con TypeScript.',
+				'Creación de migraciones, rutas y lógica backend en Ruby on Rails.',
+				'Publicar nuevos componentes en npm.',
 			],
-			badge: ['ReactJS', 'Typescript', 'Material UI', 'Github', 'Git'],
+			badge: ['ReactJS', 'Typescript', 'Storybook', 'Jest', 'Ruby on Rails', 'Github', 'Git'],
+		},
+		{
+			image: (
+				<Image priority={false} src={Dplace} width={120} height={120} alt="dplace" loading="lazy" />
+			),
+			company: 'Altiiro | Dplace',
+			title: 'Practica Analista Programador (Diseñador Web | Front End)',
+			time: 'Enero 2021 - Marzo 2021',
+			description: [
+				'Creación de wireframes y flujos de usuario',
+				'Maquetación con HTML, CSS y Bootstrap 4',
+			],
+			badge: ['HTML', 'CSS', 'JQuery'],
 		},
 	];
 

@@ -83,8 +83,8 @@ export const TaskBar = () => {
 		<Image
 			priority={false}
 			src={Arrow}
-			height={20}
-			width={20}
+			height={12}
+			width={12}
 			alt="arrow"
 			key="arrow"
 			loading="lazy"

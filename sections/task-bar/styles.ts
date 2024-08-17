@@ -60,7 +60,7 @@ export const WindowsIconContainer = styled.div`
 	}
 `;
 
-export const HoursWindows = styled.span`
+export const HoursWindows = styled.div`
 	font-size: 12px;
 	color: #fff;
 	text-align: end;
