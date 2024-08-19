@@ -16,7 +16,7 @@ const useVisualStudioCode = create<IVisualStudioCode>((set: any) => ({
 		name: 'src',
 		checked: 0.5,
 		isOpen: true,
-		children: [{ name: 'presentation.tsx' }, { name: 'work-experience.ts' }],
+		children: [{ name: 'presentation.ts' }, { name: 'work-experience' }],
 	},
 	fileSelected: '',
 	setFileSelected: (fileSelected: string) => set({ fileSelected: fileSelected }),

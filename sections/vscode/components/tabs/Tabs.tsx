@@ -34,7 +34,7 @@ export const Presentation: Function = (dev: IDev): IDev => {
 
 	const tab = [
 		{
-			title: 'Presentation.tsx',
+			title: 'presentation.ts',
 			active: false,
 			panel: (
 				<EditorContainer>
@@ -48,7 +48,7 @@ export const Presentation: Function = (dev: IDev): IDev => {
 			),
 		},
 		{
-			title: 'workExperience.ts',
+			title: 'work-experience',
 			active: false,
 			panel: <Experience />,
 		},
