@@ -6,13 +6,13 @@ export const ScreenContainer = styled.div`
 	height: calc(100svh - 50px);
 	overflow: hidden;
 	background-color: #011627;
-	background-image: url('https://images4.alphacoders.com/132/1327480.png');
+	background-image: url('/bg-desktop.png');
 	position: relative;
 	background-position: center;
 	background-size: cover;
 	/* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
 	@media (max-width: 764px) {
-		background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/01/darth-vader-art-wallpaper.jpg');
+		background-image: url('/bg-mobile.jpg');
 		background-position: center;
 		background-size: cover;
 	}

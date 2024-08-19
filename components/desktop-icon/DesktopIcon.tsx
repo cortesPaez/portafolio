@@ -1,5 +1,5 @@
 import { Drag, IconLabel } from './styles';
-import Pdf from '../../public/windows/pdf.svg';
+import Pdf from '@/public/windows/pdf.svg';
 import useVisualStudioCode from '@/store/vscode';
 import Image from 'next/image';
 

@@ -1,13 +1,13 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Arrow from '../../public/windows/arrow.svg';
-import Folder from '../../public/windows/folder.svg';
+import Arrow from '@/public/windows/arrow.svg';
+import Folder from '@/public/windows/folder.svg';
 import Image from 'next/image';
-import Screen from '../../public/windows/screen.svg';
-import Sound from '../../public/windows/sound.svg';
-import Vscode from '../../public/windows/vscode.svg';
-import Wifi from '../../public/windows/wifi.svg';
-import Windows from '../../public/windows/windows.svg';
+import Screen from '@/public/windows/screen.svg';
+import Sound from '@/public/windows/sound.svg';
+import Vscode from '@/public/windows/vscode.svg';
+import Wifi from '@/public/windows/wifi.svg';
+import Windows from '@/public/windows/windows.svg';
 
 import {
 	AppIconContainer,
@@ -33,42 +33,59 @@ export const TaskBar = () => {
 	}, []);
 
 	const appIcons = [
-		<Image
-			priority={false}
-			src={Windows}
-			height={24}
-			width={24}
-			alt="windows"
-			key="windows"
-			loading="lazy"
-		/>,
-		<Image
-			priority={false}
-			src={Screen}
-			height={24}
-			width={24}
-			alt="screen"
-			key="screen"
-			loading="lazy"
-		/>,
-		<Image
-			priority={false}
-			src={Vscode}
-			height={24}
-			width={24}
-			alt="vscode"
-			key="vscode"
-			loading="lazy"
-		/>,
-		<Image
-			priority={false}
-			src={Folder}
-			height={24}
-			width={24}
-			alt="folder"
-			key="folder"
-			loading="lazy"
-		/>,
+		{
+			icon: (
+				<Image
+					priority={false}
+					src={Windows}
+					height={24}
+					width={24}
+					alt="windows"
+					key="windows"
+					loading="lazy"
+				/>
+			),
+		},
+		{
+			icon: (
+				<Image
+					priority={false}
+					src={Screen}
+					height={24}
+					width={24}
+					alt="screen"
+					key="screen"
+					loading="lazy"
+				/>
+			),
+		},
+		{
+			icon: (
+				<Image
+					priority={false}
+					src={Vscode}
+					height={24}
+					width={24}
+					alt="windows"
+					key="windows"
+					loading="lazy"
+				/>
+			),
+			onClick: () => setShowVscode(!showVscode),
+		},
+		// {
+		// 	icon: (
+		// 		<Image
+		// 			priority={false}
+		// 			src={Windows}
+		// 			height={24}
+		// 			width={24}
+		// 			alt="windows"
+		// 			key="windows"
+		// 			loading="lazy"
+		// 		/>
+		// 	),
+		// },
 	];
 
 	function formatDate(date: Date) {
@@ -110,7 +127,7 @@ export const TaskBar = () => {
 				loading="lazy"
 			/>
 		</WifiSoundContainer>,
-		<div>
+		<>
 			<HoursWindows>
 				{currentTime.toLocaleTimeString(undefined, {
 					hour: '2-digit',
@@ -120,7 +137,7 @@ export const TaskBar = () => {
 				<br />
 				<HoursWindows>{formatDate(new Date())}</HoursWindows>
 			</HoursWindows>
-		</div>,
+		</>,
 	];
 
 	return (
@@ -128,8 +145,8 @@ export const TaskBar = () => {
 			<AppsBar>
 				<div style={{ width: '100%' }}></div>
 				<AppIconContainer>
-					{appIcons.map((icon, i) => (
-						<IconContainer key={i} onClick={() => setShowVscode(!showVscode)}>
+					{appIcons.map(({ icon, onClick }, i) => (
+						<IconContainer key={i} onClick={onClick}>
 							{icon}
 						</IconContainer>
 					))}

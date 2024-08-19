@@ -19,6 +19,7 @@ const Screen = () => {
 			</Container>
 			{showPdf && (
 				<Pdf
+					loading="lazy"
 					drag
 					dragMomentum={false}
 					src="https://drive.google.com/file/d/1yH9_vfZFzPoTWljExlQvpyhzXfOmEguG/preview"

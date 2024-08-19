@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 import Image from 'next/image';
 import { Badge, BadgeType } from '../badge/Badge';
-import Socius from '../../../../public/experience/socius.png';
-import Etpay from '../../../../public/experience/etpay.png';
-import Birchamn from '../../../../public/experience/birchman.jpg';
-import Clever from '../../../../public/experience/clever.jpg';
-import Bice from '../../../../public/experience/bice.png';
-import Dplace from '../../../../public/experience/dplace.jpg';
+import Socius from '@/public/experience/socius.png';
+import Etpay from '@/public/experience/etpay.png';
+import Birchamn from '@/public/experience/birchman.jpg';
+import Clever from '@/public/experience/clever.jpg';
+import Bice from '@/public/experience/bice.png';
+import Dplace from '@/public/experience/dplace.jpg';
 
 import {
 	BadgeContainer,
