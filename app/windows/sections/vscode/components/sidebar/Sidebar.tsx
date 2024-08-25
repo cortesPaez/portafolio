@@ -1,4 +1,4 @@
-import { FileIconVscode, GitIcon, SearcIconVscode, SettingsIcon } from '@/components/icons';
+import { FileIconVscode, GitIcon, SearcIconVscode, SettingsIcon } from '@/app/windows/components/icons';
 import { Container, SidebarIconContainer } from './styles';
 
 export const Sidebar = () => {

@@ -1,24 +1,21 @@
 'use client';
 
-import Screen from '@/sections/screen/Screen';
-import { TaskBar } from '@/sections/task-bar/TaskBar';
-import { Suspense, useLayoutEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 export default function Home() {
-	const [render, setRender] = useState(false);
-	useLayoutEffect(() => {
-		setRender(!render);
+	const router = useRouter();
+
+	useEffect(() => {
+		router.push('/windows');
 	}, []);
+
 	return (
 		<>
-			{render && (
-				<main style={{ width: '100vw', maxHeight: '100svh' }}>
-					<Suspense fallback={<h1>cargando</h1>}>
-						<Screen />
-						<TaskBar />
-					</Suspense>
-				</main>
-			)}
+			<main>
+				<Link href="/windows">Windows</Link>
+			</main>
 		</>
 	);
 }

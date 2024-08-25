@@ -43,7 +43,7 @@ export const Drag = styled(motion.div)`
 	margin: -40px auto;
 	transition: all 1ms ease;
 	overflow: hidden;
-	max-width: 1100px;
+	max-width: 800px;
 	height: 537px;
 
 	@media (max-width: 764px) {

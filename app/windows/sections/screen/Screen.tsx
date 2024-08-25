@@ -1,11 +1,11 @@
 'use client';
 import { useRef } from 'react';
 import { Container, ScreenContainer, Drag, Pdf } from './styles';
-import { DesktopIcon } from '@/components/desktop-icon/DesktopIcon';
 import VisualStudioCode from '../vscode/VisualStudioCode';
 import { useScreenSize } from '@/hooks/useScreenSize';
 import useVisualStudioCode from '@/store/vscode';
 import { AnimatePresence } from 'framer-motion';
+import { DesktopIcon } from '../../components/desktop-icon/DesktopIcon';
 
 const Screen = () => {
 	const { show, showPdf } = useVisualStudioCode();
