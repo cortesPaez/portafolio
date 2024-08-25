@@ -17,6 +17,7 @@ const Screen = () => {
 			<Container>
 				<DesktopIcon icon="pdf" />
 				<DesktopIcon icon="linkedin" />
+				<DesktopIcon icon="github" />
 			</Container>
 			{showPdf && (
 				<Pdf
