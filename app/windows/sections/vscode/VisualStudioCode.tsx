@@ -1,16 +1,16 @@
 'use client';
+import useWindows from '@/store/windows';
 import { FileList } from './components';
 import Tabs from './components/tabs/Tabs';
 import { Screen, ScreenBar } from './styles';
-import useVisualStudioCode from '@/store/vscode';
 
 const VisualStudioCode = () => {
-	const { show, setShow } = useVisualStudioCode();
+	const { showVscode, setShowVscode } = useWindows();
 
 	return (
 		<>
 			<ScreenBar>
-				<div onClick={() => setShow(!show)}>
+				<div onClick={() => setShowVscode(!showVscode)}>
 					<svg
 						width="13"
 						height="13"

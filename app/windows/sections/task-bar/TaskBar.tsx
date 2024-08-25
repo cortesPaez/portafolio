@@ -18,10 +18,10 @@ import {
 	WifiSoundContainer,
 	WindowsIconContainer,
 } from './styles';
-import useVisualStudioCode from '@/store/vscode';
+import useWindows from '@/store/windows';
 
 export const TaskBar = () => {
-	const { show: showVscode, setShow: setShowVscode } = useVisualStudioCode();
+	const { showVscode, setShowVscode, setShowPdf } = useWindows();
 	const [currentTime, setCurrentTime] = useState(new Date());
 
 	useEffect(() => {
@@ -71,7 +71,10 @@ export const TaskBar = () => {
 					loading="lazy"
 				/>
 			),
-			onClick: () => setShowVscode(!showVscode),
+			onClick: () => {
+				setShowVscode(!showVscode);
+				setShowPdf(false);
+			},
 		},
 		// {
 		// 	icon: (

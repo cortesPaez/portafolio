@@ -1,20 +1,38 @@
 import { Drag, IconLabel } from './styles';
 import Pdf from '@/public/windows/pdf.svg';
-import useVisualStudioCode from '@/store/vscode';
+import Linkedin from '@/public/windows/linkedin.svg';
+
+import useWindows from '@/store/windows';
 import Image from 'next/image';
 
 interface IDesktopIcon {
-	icon: 'pdf' | 'spotify' | 'file';
+	icon: 'pdf' | 'linkedin' | 'file';
 }
 
 export const DesktopIcon = ({ icon }: IDesktopIcon) => {
-	const { showPdf, setShowPdf } = useVisualStudioCode();
+	const { showPdf, setShowPdf, setShowVscode } = useWindows();
 	const iconMap = new Map([
 		[
 			'pdf',
 			{
 				icon: <Image src={Pdf} alt="pdf" key="pdf" loading="lazy" width={51} priority={false} />,
 				text: 'Curriculum',
+			},
+		],
+		[
+			'linkedin',
+			{
+				icon: (
+					<Image
+						src={Linkedin}
+						alt="linkedin"
+						key="linkedin"
+						loading="lazy"
+						width={51}
+						priority={false}
+					/>
+				),
+				text: 'Perfil de Linkedin',
 			},
 		],
 	]);
@@ -25,7 +43,13 @@ export const DesktopIcon = ({ icon }: IDesktopIcon) => {
 				drag
 				dragMomentum={false}
 				onClick={() => {
-					icon === 'pdf' && setShowPdf(!showPdf);
+					if (icon === 'pdf') {
+						setShowPdf(!showPdf);
+						setShowVscode(false);
+					}
+					if (icon === 'linkedin') {
+						window.open('https://www.linkedin.com/in/ccortespaez/', '_blank');
+					}
 				}}
 			>
 				{iconMap.get(icon)?.icon}
