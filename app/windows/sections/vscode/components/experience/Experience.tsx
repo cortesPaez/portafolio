@@ -30,16 +30,6 @@ export const Experience = () => {
 	const workExperience: IWorkExperience[] = [
 		{
 			image: (
-				<Image priority={false} src={Socius} width={120} height={120} alt="Socius" loading="lazy" />
-			),
-			company: 'SOCIUS',
-			title: 'Desarrollador FrontEnd en SOCIUS',
-			time: 'Mayo 2024 - Julio 2024',
-			description: 'Maquetación de proyectos para AFC con ui kit de SONDA',
-			badge: ['ReactJS', 'Typescript', 'Redux', 'Storybook', 'Gitlab', 'Git'],
-		},
-		{
-			image: (
 				<Image
 					priority={false}
 					src={Etpay}
@@ -52,7 +42,7 @@ export const Experience = () => {
 			),
 			company: 'Etpay',
 			title: 'Desarrollador FrontEnd en ETPay',
-			time: 'Agosto 2023 - Abril 2024',
+			time: 'Agosto 2023 - Mayo 2024',
 			description: [
 				`Creación de componentes dinamicos y reutilizables.`,
 				'Implementar nuevos modulos para los comercios.',
@@ -61,32 +51,11 @@ export const Experience = () => {
 		},
 		{
 			image: (
-				<Image
-					priority={false}
-					src={Birchamn}
-					width={120}
-					height={120}
-					alt="Birchamn"
-					loading="lazy"
-				/>
-			),
-			company: 'birchman',
-			title: 'Desarrollador FrontEnd en Birchman Group',
-			time: 'Mayo 2023 - Agosto 2023',
-			description: [
-				'Inicialización del proyecto para Zurich Santander desde 0 con ViteJS utilizando módulos.',
-				'Creación de inicio de sesión y registro de usuarios con JWT y Session Storage.',
-				'Creación de componetes custom con Material UI.',
-			],
-			badge: ['ReactJS', 'Typescript', 'Material UI', 'Github', 'Git'],
-		},
-		{
-			image: (
 				<Image priority={false} src={Bice} width={120} height={120} alt="bice" loading="lazy" />
 			),
 			company: 'Banco BICE',
 			title: 'Desarrollador Full Stack en Banco BICE',
-			time: 'Enero 2023 - Mayo 2023',
+			time: 'Enero 2023 - Julio 2023',
 			description: [
 				'Migración de servicios a bff.',
 				'Implementación de componentes desde él ui-kit en ReactNative.',
@@ -101,7 +70,7 @@ export const Experience = () => {
 			),
 			company: 'Clever By BICE',
 			title: 'Desarrollador Full Stack en Clever By BICE',
-			time: 'Diciembre 2021 - Diciembre 2022',
+			time: 'Diciembre 2021 - Enero 2023',
 			description: [
 				'Construcción de componentes en Storybook y nuevas features en los proyectos de Clever con ReactJS con TypeScript.',
 				'Creación de migraciones, rutas y lógica backend en Ruby on Rails.',

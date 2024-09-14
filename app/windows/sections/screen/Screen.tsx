@@ -24,7 +24,7 @@ const Screen = () => {
 					loading="lazy"
 					drag
 					dragMomentum={false}
-					src="https://drive.google.com/file/d/1yH9_vfZFzPoTWljExlQvpyhzXfOmEguG/preview"
+					src="https://drive.google.com/file/d/1sHCp7DjLWO701QmVBczN38JH5OfNE1s7/preview"
 				/>
 			)}
 			<AnimatePresence>
